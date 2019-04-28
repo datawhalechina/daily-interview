@@ -19,6 +19,7 @@
    + [Tree Embedding](./machine-learning/tree_embedding.md)
    + [GBDT LR](./machine-learning/gbdt_lr.md)
    + [Kmeans](./machine-learning/kmeans.md)
+   + [logistic_regression](./machine-learning/logistic_regression.md)
 2. Coding
    + [数组](./coding/Array.md)
    + [排序](./coding/sort.md)
