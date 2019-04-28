@@ -15,8 +15,8 @@ context(W)=(Wt−c ,...,Wt−2,Wt−1;Wt+1,Wt+2,...,Wt+c)
 | skip-gram       | 神经网络   | 最大化p(w\|context(w))，即用中心词w的上下文去预测 w | - 最大化均值“对数似然概率”  - 见式①、式②    - 式①中两个词之间的 skip-gram 概率p(wt+j\|wt) 可以定义为式②  - 式②分子是把w对应的词向量和  context(w) 里的某个词对应的词向量做内积，分母是把 w对应的词向量和词汇表中的所有词向量做内积   | 
 | CBOW   | 神经网络 | 最大化p(context(w)\|w)，即用中心词w去预测其上下文   | - 于skip-gram类似, 调换Wt+j和Wt的位置即可 | 
 
-![图片](https://uploader.shimo.im/f/P4TRFtpLw60xH8AB.png!thumbnail)  ---- ①
-![图片](https://uploader.shimo.im/f/bVPzpjXTsEQAsK2H.png!thumbnail)        ---- ②
+<img src="../assert/formula-word2vec-1.png"/> ---- ①
+<img src="../assert/formula-word2vec-2.png"/>     ---- ②
 
 
 
