@@ -18,11 +18,11 @@
    + [Frequent Pattern](./machine-learning/frequent_pattern.md)
    + [Tree Embedding](./machine-learning/tree_embedding.md)
    + [GBDT LR](./machine-learning/gbdt_lr.md)
+   + [Kmeans](./machine-learning/kmeans.md)
 2. Coding
    + [数组](./coding/Array.md)
    + [排序](./coding/sort.md)
-   + [贪心](./coding/greedy.md) 
-
+   + [贪心](./coding/greedy.md)
 ### 图像处理算法工程师
 TODO
 ### 自然语言处理算法工程
