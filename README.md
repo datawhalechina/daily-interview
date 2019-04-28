@@ -15,6 +15,9 @@
 1. ML
    + [Decision Tree](./machine-learning/DecisionTree.md)
    + [Adaboost](./machine-learning/Adaboost.md)
+   + [Frequent Pattern](./machine-learning/frequent_pattern.md)
+   + [Tree Embedding](./machine-learning/tree_embedding.md)
+   + [GBDT LR](./machine-learning/gbdt_lr.md)
 2. Coding
    + [数组](./coding/Array.md)
    + [排序](./coding/sort.md)
