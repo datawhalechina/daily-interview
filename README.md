@@ -19,9 +19,9 @@
    + [Tree Embedding](./machine-learning/tree_embedding.md)
    + [GBDT LR](./machine-learning/gbdt_lr.md)
    + [Kmeans](./machine-learning/kmeans.md)
-   + [logistic_regression](./machine-learning/logistic_regression.md)
+   + [logistic regression](./machine-learning/logistic_regression.md)
    + [Word2Vec](./machine-learning/word2vec.md)
-   + [Collaborative Filtering](./machine-learning/collaborative filtering.md)
+   + [Collaborative Filtering](./machine-learning/collaborative_filtering.md)
    
 2. Coding
    + [数组](./coding/Array.md)
