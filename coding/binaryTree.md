@@ -415,8 +415,49 @@ public:
 };
 
 ```
+## 11. 左边看到的二叉树结点
+> 题目: 给你一个二叉树,打印出来从左边视角看到的所有结点.
+
+```
+Input 1: 
+                 1
+               /   \
+              2     3
+             / \     \
+            4   5     6             
+Output 1: 1 2 4
+
+Input 2:
+        1
+      /   \
+    2       3
+      \   
+        4  
+          \
+            5
+             \
+               6
+Output 2: 1 2 4 5 6
+```
+> 解析:         
+> 方法一: 用我们上面提到的层次遍历, 打印出来每一层的第一个结点即可.     
+> 方法二: 维护一个从左到右的最大等级, 如果当前等级大于最大等级,则是左边看到的,否则不是.     
+> 这里只给出第二种方法的代码.       
+```
+// leftView(root, 1, 0, ans)
+void leftView(struct node *root, int level, int &max_level, vector<int> &ans) { 
+    if (root==NULL)  return;   
+    if (max_level < level) { 
+        ans.push_back(root->data);
+        max_level = level; 
+    } 
+    leftView(root->left, level+1, max_level, ans); 
+    leftView(root->right, level+1, max_level, ans); 
+} 
+```
 
 ## 参考
 1. http://www.cnblogs.com/grandyang/p/6864398.html
 2. https://www.jiuzhang.com/solution/
 3. https://www.geeksforgeeks.org/binary-tree-data-structure/
+4. https://www.geeksforgeeks.org/print-left-view-binary-tree/
