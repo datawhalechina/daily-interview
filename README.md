@@ -29,6 +29,8 @@
    + [贪心](./coding/greedy.md)
    + [字符串](./coding/string.md)
    + [链表](./coding/linklist.md)
+   + [二叉树](./coding/binaryTree.md)
+
 ### 图像处理算法工程师
 TODO
 ### 自然语言处理算法工程
