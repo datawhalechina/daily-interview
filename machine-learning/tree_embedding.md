@@ -142,6 +142,11 @@ CatBoost = Category + Boosting.
 15. gbdt如何防止过拟合？由于gbdt是前向加法模型，前面的树往往起到决定性的作用，如何改进这个问题？
 > 一般使用缩减因子对每棵树进行降权，可以使用带有dropout的gbdt算法，dart树，随机丢弃生成的决策树，然后再从剩下的决策树集中迭代优化提升树。
 
+16. RF/GBDT/XGB/lightGBM ?
+> <img src='../assert/gbdt-1.png'>
+> <img src='../assert/gbdt-2.png'>
+> <img src='../assert/gbdt-3.png'>
+> <img src='../assert/gbdt-4.png'>
 
 # 面试真题
 1. RF和GBDT能够并行吗?
