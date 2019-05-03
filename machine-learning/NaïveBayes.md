@@ -14,14 +14,14 @@ $$P(Y|X_1,..,X_i)=\frac{P(X_1,..,X_i)P(Y)}{P(X_1,...,X_i)}$$
 由于在预测时，同种方案下，分母$P(X_1,…,X_i)$相同，因此我们可以不用考虑这部分。因此，此模型，我们重点需要计算的部分即为:$P(X_1,..,X_i)P(Y)$。
 根据链式法则，假设**各个特征相互独立**，模型即可变为以下公式: $P(X_1|P)*P(X_2|Y)...P(X_i|Y)$.其中，$P(X_i|Y)=\frac{D_{X,Y}}{D_Y}$ 。
 
-1. 连续概率模型（采用最大似然估计）假设概率的密度函数为:
+2. 连续概率模型（采用最大似然估计）假设概率的密度函数为:
 $$P(X_i|Y)=\frac{1}{\sqrt{2\Pi}\sigma_Y}e^{\frac{{(X_i-\mu_\gamma)}^2}{2\sigma_\gamma}}$$
 其中:
 $$\hat{\mu}_\gamma=\frac{1}{|D_\gamma|}\sum_{X \in D_c}X$$
 
 $$\hat{\sigma}_\gamma^2=\frac{1}{|D_\gamma|} \sum_{X \in D_\gamma}(X-\hat{\mu_\gamma})(X-\hat{\mu_\gamma})^T$$
 
-1. 拉普拉斯修正（避免因样本不充分而导致估计概率为0）
+3. 拉普拉斯修正（避免因样本不充分而导致估计概率为0）
 令N表示训练集D中可能的类别数，Ni表示第i个属性可能的取值数
 $$\hat{P}(Y)=\frac{|D_\gamma|+1}{D+N}$$
 $$\hat{P}(X_i|Y)=\frac{|D_{Y,X_i}|+1}{D_\gamma+N_i}$$
