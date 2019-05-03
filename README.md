@@ -34,6 +34,8 @@
    + [链表](./coding/linklist.md)
    + [二叉树](./coding/binaryTree.md)
    + [图](./coding/graph.md)
+   + [搜索](./coding/search.md)
+
 3. Big data
    + [MapReduce](./big-data/mapreduce.md)
    + [Technology](./big-data/Technology.md)

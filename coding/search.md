@@ -252,12 +252,114 @@ int ladderLength(string &start, string &end, unordered_set<string> &dict) {
 ```
 
 ```
+bool dfs(int i, int j, int k, vector<vector<char>> &board, string word, vector<vector<int>> &vis) {
+    if(board[i][j] == word[k]) {
+        ++ k;
+        if(k == word.size()) {
+            return true;
+        }
+    }
+    else return false;
+    
+    bool flag = false; 
+    
+    vis[i][j] = 1;
+    if(i-1 >=0 && (!vis[i-1][j]) && board[i-1][j] == word[k]) flag = flag | dfs(i-1, j, k, board, word, vis); 
+    if(flag) return flag;
+    if(i+1 < board.size() && (!vis[i+1][j]) && board[i+1][j] == word[k]) flag = flag | dfs(i+1, j, k, board, word, vis); 
+    if(flag) return flag;
 
+    if(j-1 >= 0 && (!vis[i][j-1]) && board[i][j-1] == word[k]) flag = flag | dfs(i, j-1, k, board, word, vis);
+    if(flag) return flag;
 
-
+    if(j+1 <= board[0].size() && (!vis[i][j+1]) && board[i][j+1] == word[k]) flag = flag | dfs(i, j+1, k, board, word, vis);
+    // 下次使用标记
+    vis[i][j] = 0;
+    return flag;
+}    
+bool exist(vector<vector<char>> &board, string &word) {
+    if(board.empty() || board[0].size() == 0) return false;
+    bool res = false;
+    vector<vector<int>> vis(board.size(), vector<int>(board[0].size(), 0));
+    
+    for(int i = 0; i < board.size(); i ++) {
+        for(int j = 0; j < board[i].size(); j ++) {
+            if(word[0] == board[i][j] && dfs(i,j,0,board,word, vis)){
+                return true;                    
+            }
+        }
+    }
+    return res;   
+}
 ```
 
-## 6. Partition of a set into K subsets with equal sum (k个子集的和相同)
+## 9. 分割字符串
+> **题目**: 给一个字符串,你可以选择在一个字符或两个相邻字符之后拆分字符串,使字符串由仅一个字符或两个字符组成,输出所有可能的结果.    
+> **解析**： dfs(s) = dfs(s-1) + dfs(s-2)
 
+```
+void dfs(int i, string s, vector<string> &now, vector<vector<string>> &res) {
+    if(i == s.size()) {
+        res.push_back(now);
+        return;
+    }
+    if(s.size() - i == 1) {
+        now.push_back(s.substr(i, 1));
+        dfs(i+1,s,now,res);
+        now.pop_back();
+        return;
+    }
+    if(s.size() - i >= 2) {
+        now.push_back(s.substr(i, 1));
+        dfs(i+1,s,now,res);    
+        now.pop_back();
+        now.push_back(s.substr(i, 2));
+        dfs(i+2,s,now,res);
+        now.pop_back();
+    }    
+} 
+vector<vector<string>> splitString(string& s) {
+    vector<string> now; 
+    vector<vector<string>> res;
+    dfs(0,s,now,res);    
+    return res;
+}
+```
 
+## 10. 划分回文串
+> **题目**: 给定一个字符串S，将S切分成每一个子串都是回文串，返回所有可能的结果.
 
+```
+Input  : s = "bcc"
+Output : [["b", "c", "c"], ["b", "cc"]]
+```
+```
+bool checkPalindrome(string str) { 
+    int len = str.length(); 
+    len--; 
+    for (int i=0; i<len; i++) { 
+        if (str[i] != str[len]) return false; 
+        len--; 
+    } 
+    return true; 
+} 
+void addStrings(vector<vector<string> > &v, string &s, 
+                vector<string> &temp, int index) { 
+    int len = s.length(); 
+    string str; 
+    vector<string> current = temp; 
+    if (index == 0) temp.clear(); 
+    for (int i = index; i < len; ++i) { 
+        str = str + s[i]; 
+        if (checkPalindrome(str)) { 
+            temp.push_back(str); 
+            if (i+1 < len) 
+                addStrings(v,s,temp,i+1); 
+            else
+                v.push_back(temp); 
+            temp = current; 
+        } 
+    } 
+    return; 
+} 
+```
