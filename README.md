@@ -23,6 +23,7 @@
    + [Word2Vec](./machine-learning/word2vec.md)
    + [Collaborative Filtering](./machine-learning/collaborative_filtering.md)
    + [k-nearest neighbor](./machine-learning/kNN.md)
+   + [SVM](./machine-learning/SVM.md)
    
 2. Coding
    + [数组](./coding/Array.md)
