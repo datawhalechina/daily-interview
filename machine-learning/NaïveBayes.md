@@ -30,6 +30,7 @@ $$\hat{P}(X_i|Y)=\frac{|D_{Y,X_i}|+1}{D_\gamma+N_i}$$
 1. 贝叶斯公式的物理意义？
 <img src="https://img-blog.csdnimg.cn/20181227111542762"/>
 ![图片](https://uploader.shimo.im/f/rbUiZ3BXJHYS0eS2.jpg!thumbnail)
+
 2. 后验概率最大化的含义？
 > 后验概率最大化等价于0-1损失函数期望风险最小化。 
 > 详见:《统计学习方法》48页
