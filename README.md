@@ -22,6 +22,7 @@
    + [logistic regression](./machine-learning/logistic_regression.md)
    + [Word2Vec](./machine-learning/word2vec.md)
    + [Collaborative Filtering](./machine-learning/collaborative_filtering.md)
+   + [k-nearest neighbor](./machine-learning/kNN.md)
    
 2. Coding
    + [数组](./coding/Array.md)
@@ -33,6 +34,7 @@
    + [图](./coding/graph.md)
 3. Big data
    + [MapReduce](./big-data/mapreduce.md)
+   + [Technology](./big-data/Technology.md)
    + [Questions](./big-data/questions.md)
 
 ### 图像处理算法工程师
