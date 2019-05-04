@@ -25,6 +25,7 @@
    + [k-nearest neighbor](./machine-learning/kNN.md)
    + [SVM](./machine-learning/SVM.md)
    + [NaïveBayes](./machine-learning/NaïveBayes.md)
+   + [metrics](./machine-learning/metrics.md)
    
 2. Coding
    + [数组](./coding/Array.md)
