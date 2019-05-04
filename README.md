@@ -41,9 +41,12 @@
    + [Technology](./big-data/Technology.md)
    + [Questions](./big-data/questions.md)
 
+4. Logic & Probability
+   + [逻辑题目](./logic-probability/logic.md)
+
 ### 图像处理算法工程师
 TODO
-### 自然语言处理算法工程
+### 自然语言处理算法工程师
 TODO
 
 ## 使用方法：
