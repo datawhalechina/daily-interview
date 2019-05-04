@@ -26,6 +26,8 @@
    + [SVM](./machine-learning/SVM.md)
    + [NaïveBayes](./machine-learning/NaïveBayes.md)
    + [metrics](./machine-learning/metrics.md)
+   + features selection
+   + optimizers
    
 2. Coding
    + [数组](./coding/Array.md)
@@ -36,6 +38,8 @@
    + [二叉树](./coding/binaryTree.md)
    + [图](./coding/graph.md)
    + [搜索](./coding/search.md)
+   + 动态规划
+   + 其他
 
 3. Big data
    + [MapReduce](./big-data/mapreduce.md)
@@ -44,11 +48,21 @@
 
 4. Logic & Probability
    + [逻辑题目](./logic-probability/logic.md)
+   + 概率题目
 
-### 图像处理算法工程师
-TODO
+5. cs basis     
+   + 操作系统
+   + 计算机网络 
+
+6. DL       
+   + 深度学习基础
+
+### 图像处理算法工程图
+1. CV       
+   + TODO 
 ### 自然语言处理算法工程师
-TODO
+1. NLP      
+   + TODO
 
 ## 使用方法：
 面试之前能够花半天时间翻一翻的面试笔记，翻看不是目的，目的是翻看时候的温故、知新和信心。建议每个求职者根据自己的面试经验和项目情况填充该框架，加入自己的理解与感悟，把知识内化于心，刻上自己的印记。
