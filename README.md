@@ -26,6 +26,7 @@
    + [SVM](./machine-learning/SVM.md)
    + [NaïveBayes](./machine-learning/NaïveBayes.md)
    + [metrics](./machine-learning/metrics.md)
+   + [hmm](./machine-learning/HMM.md)
    + features selection
    + optimizers
    
