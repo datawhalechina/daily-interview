@@ -1,0 +1,7 @@
+# Logs
+logs
+*.log
+
+# C++
+*.o
+
