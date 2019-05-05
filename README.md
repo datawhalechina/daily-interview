@@ -38,7 +38,7 @@
    + [二叉树](./coding/binaryTree.md)
    + [图](./coding/graph.md)
    + [搜索](./coding/search.md)
-   + 动态规划
+   + [动态规划](./coding/dp.md)
    + 其他
 
 3. Big data
