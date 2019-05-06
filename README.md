@@ -50,7 +50,7 @@
 
 4. Logic & Probability
    + [逻辑题目](./logic-probability/logic.md)
-   + 概率题目
+   + [概率题目](./logic-probability/probability.md)
 
 5. cs basis     
    + 操作系统
