@@ -52,7 +52,7 @@
    + [逻辑题目](./logic-probability/logic.md)
    + [概率题目](./logic-probability/probability.md)
 
-5. cs basis     
+5. cs subjects     
    + [操作系统](./cs-subjects/opreating-systems.md)
    + [计算机网络](./cs-subjects/compute-networks.md) 
    + [数据库](./cs-subjects/dbms.md)
