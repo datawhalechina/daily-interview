@@ -53,9 +53,9 @@
    + [概率题目](./logic-probability/probability.md)
 
 5. cs basis     
-   + 操作系统
-   + 计算机网络 
-   + 数据库
+   + [操作系统](./cs-subjects/opreating-systems.md)
+   + [计算机网络](./cs-subjects/compute-networks.md) 
+   + [数据库](./cs-subjects/dbms.md)
 
 6. DL       
    + 深度学习基础
