@@ -19,17 +19,17 @@
    + [Tree Embedding](./machine-learning/tree_embedding.md)
    + [GBDT LR](./machine-learning/gbdt_lr.md)
    + [Kmeans](./machine-learning/kmeans.md)
-   + [logistic regression](./machine-learning/logistic_regression.md)
+   + [Logistic regression](./machine-learning/logistic_regression.md)
    + [Word2Vec](./machine-learning/word2vec.md)
    + [Collaborative Filtering](./machine-learning/collaborative_filtering.md)
-   + [k-nearest neighbor](./machine-learning/kNN.md)
+   + [K-nearest neighbor](./machine-learning/kNN.md)
    + [SVM](./machine-learning/SVM.md)
    + [NaïveBayes](./machine-learning/NaïveBayes.md)
-   + [metrics](./machine-learning/metrics.md)
-   + [hmm](./machine-learning/HMM.md)
+   + [Metrics](./machine-learning/metrics.md)
+   + [HMM](./machine-learning/HMM.md)
    + [CRF](./machine-learning/CRF.md)
-   + features selection
-   + optimizers
+   + Features selection
+   + Optimizers
    
 2. Coding
    + [数组](./coding/Array.md)
