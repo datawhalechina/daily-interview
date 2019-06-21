@@ -23,12 +23,13 @@ $$P(X=x_i)=p_i, i=1,2,...,n$$
 $$H(P)=-\sum_{i=1}^{n}p_ilog{p_i}$$
 熵越大，随机变量的不确定性就越大，当$p_i=\frac{1}{n}$时，随机变量的熵最大等于logn，故$0 \leq H(P) \leq logn$.
 常见的决策树由三种: ID3、C4.5、CART.        
-| ** model **   | ** feature select **   | ** 树的类型 **   | **计算公式**   | 
+| **model**   | **feature select**   | **树的类型**   | **计算公式**   | 
 |:----:|:----:|:----:|:----:|
 | ID3       | {分类:信息增益}   | 多叉树   | $g(D,A)=H(D)-H_A(D)$    | 
 | C4.5      | {分类:信息增益比}   | 多叉树   | $g_R(D,A)=\frac{g(D,A)}{H_A(D)}$   | 
 | CART      | {分类:基尼指数}   | 二叉树   | $Gini(p)=\sum_{k=1}^{K}p_k(1-p_k)=1-\sum_{k=1}^{K}p_k^2$   | 
-| CART      | {回归:平方误差}   | 二叉树   | $min_{j,s}[min_{c_1} \sum_{x_i \in R_1(j,s)}(y_i-c_1)^2 + min_{c_2} \sum_{x_i \in R_2(j,s)}(y_i-c_2)^2]$    |      
+| CART      | {回归:平方误差}   | 二叉树   | $min_{j,s}[min_{c_1} \sum_{x_i \in R_1(j,s)}(y_i-c_1)^2 + min_{c_2} \sum_{x_i \in R_2(j,s)}(y_i-c_2)^2]$    |  
+    
 其中, $H_A(D)=H(D|A)$, $R_1(j,s)={x^{(j)}\leq s}$, $R_2(j,s)={x^{(j)} > s}$.                
 ## 算法十问         
 1. 决策树和条件概率分布的关系？     
