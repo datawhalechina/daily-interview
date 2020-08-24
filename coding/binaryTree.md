@@ -17,29 +17,38 @@ struct TreeNode {
 > **题目**: 给出二叉树的层次遍历, 前序, 中序, 后序 遍历.    
 > **扩展**: 前序遍历的迭代形式,希望大家自行手写中序和后序的迭代代码, 很多公司会问道非递归代码.
 ```
-// 前序遍历
+// 前序遍历: 根 -> 左 -> 右 [感谢wbzhang233(https://github.com/wbzhang233)同学提出问题]
 void printPostorder(struct TreeNode* node) { 
     if (node == NULL) 
         return;   
+    // 根
+    cout << node->data << "";
+    // 左
     printPostorder(node->left); 
+    // 右
     printPostorder(node->right);   
-    cout << node->data << " "; 
 } 
-// 中序遍历  
+// 中序遍历: 左 -> 根 -> 右  
 void printInorder(struct TreeNode* node) { 
     if (node == NULL) 
         return; 
+    // 左
     printInorder(node->left);   
+    // 根
     cout << node->data << " ";   
+    // 右
     printInorder(node->right); 
 } 
-// 后序遍历  
+// 后序遍历: 左 -> 右 -> 根 [感谢wbzhang233(https://github.com/wbzhang233)同学提出问题]
 void printPreorder(struct TreeNode* node) { 
     if (node == NULL) 
         return; 
-    cout << node->data << " "; 
+    // 左
     printPreorder(node->left);  
-    printPreorder(node->right); 
+    // 右
+    printPreorder(node->right);
+    // 根
+    cout << node->data << " ";
 }  
 
 // 层次遍历 
