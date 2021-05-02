@@ -4,61 +4,68 @@
 
 牛客网，知乎等众多网站上包含了数以百万计的面经，但往往大而散，面试者在准备面试时候去翻阅不但浪费时间，翻阅材料越多，越觉得自己很多知识点都没有掌握，造成心理上极大的压力，导致面试中不能发挥正常水平甚至面试失败。
 其实，每一位求职者都应该有自己的一份面试笔记，记录笔试中常涉及到的知识点和项目中常被问到的问题。每次面试之前看一遍，做到举一反三，融会贯通，熟捻于心，方能在每次面试中汲取经验，最后从容应对。我个人就有自己的面试笔记，每次面试之前都会翻一遍，边看边想，但求好运。
+
 ## 宗旨：
 不需要大而全，涵盖所有内容，因为知识在不断更新迭代，我们也做不到涵盖所有。
 不提供查漏补缺，因为每个人的短板不尽相同，需要面试者根据自己知识体系，多加思考，自己完善。
 这是一份每一个面试者面试之前必看一遍的小面经。面试之前的半天时间，温故而知新。
 
 ## 内容：
+
+![计算机](https://tva1.sinaimg.cn/large/008i3skNgy1gq44djbyncj30u018ygps.jpg)
+
+使用指南：
+
+1. 目前大部分成员是做AI算法，所以主要精力在AI算法一块。若有对开发感兴趣的人员参与整理，十分欢迎。
+
+2. 数据结构与算法本来属于计算机基础一部分，但是因为不管面试算法岗还是开发岗，都会问到，所以单独提出来。
+
+3. 算法岗：重点是AI算法、数据结构与算法；了解数学、计算机基础。
+
+   开发岗：重点是开发、数据结构与算法、计算机基础。
+
 以面试岗位为梳理主线，整理面试之前必看的面试题目，给出高频的面试知识点和面试题。
+
 ### 机器学习算法工程师
-1. ML
-   + [Decision Tree](./machine-learning/DecisionTree.md)
-   + [Adaboost](./machine-learning/Adaboost.md)
-   + [Frequent Pattern](./machine-learning/frequent_pattern.md)
-   + [Tree Embedding](./machine-learning/tree_embedding.md)
-   + [GBDT LR](./machine-learning/gbdt_lr.md)
-   + [Kmeans](./machine-learning/kmeans.md)
-   + [Logistic regression](./machine-learning/logistic_regression.md)
-   + [Word2Vec](./machine-learning/word2vec.md)
-   + [Collaborative Filtering](./machine-learning/collaborative_filtering.md)
-   + [K-nearest neighbor](./machine-learning/kNN.md)
-   + [SVM](./machine-learning/SVM.md)
-   + [NaïveBayes](./machine-learning/NaïveBayes.md)
-   + [Metrics](./machine-learning/metrics.md)
-   + [HMM](./machine-learning/HMM.md)
-   + [CRF](./machine-learning/CRF.md)
+1. 机器学习
+   + [Decision Tree](./AI算法/AI算法/machine-learning/DecisionTree.md)
+   + [Adaboost](./AI算法/machine-learning/Adaboost.md)
+   + [Frequent Pattern](./AI算法/machine-learning/frequent_pattern.md)
+   + [Tree Embedding](./AI算法/machine-learning/tree_embedding.md)
+   + [Kmeans](./AI算法/machine-learning/kmeans.md)
+   + [Logistic regression](./AI算法/machine-learning/logistic_regression.md)
+   + [K-nearest neighbor](./AI算法/machine-learning/kNN.md)
+   + [SVM](./AI算法/machine-learning/SVM.md)
+   + [NaïveBayes](./AI算法/machine-learning/NaïveBayes.md)
+   + [Metrics](./AI算法/machine-learning/metrics.md)
+   + [HMM](./AI算法/machine-learning/HMM.md)
+   + [CRF](./AI算法/machine-learning/CRF.md)
    + Features selection
    + Optimizers
    
-2. Coding
-   + [数组](./coding/Array.md)
-   + [排序](./coding/sort.md)
-   + [贪心](./coding/greedy.md)
-   + [字符串](./coding/string.md)
-   + [链表](./coding/linklist.md)
-   + [二叉树](./coding/binaryTree.md)
-   + [图](./coding/graph.md)
-   + [搜索](./coding/search.md)
-   + [动态规划](./coding/dp.md)
+2. 数据结构与算法
+   + [数组](./数据结构与算法/Array.md)
+   + [排序](./数据结构与算法/sort.md)
+   + [贪心](./数据结构与算法/greedy.md)
+   + [字符串](./数据结构与算法/string.md)
+   + [链表](./数据结构与算法/linklist.md)
+   + [二叉树](./数据结构与算法/binaryTree.md)
+   + [图](./数据结构与算法/graph.md)
+   + [搜索](./数据结构与算法/search.md)
+   + [动态规划](./数据结构与算法/dp.md)
    + 其他
 
 3. Big data
-   + [MapReduce](./big-data/mapreduce.md)
-   + [Technology](./big-data/Technology.md)
-   + [Questions](./big-data/questions.md)
+   + [MapReduce](./开发/大数据/mapreduce.md)
+   + [Technology](./开发/大数据/Technology.md)
+   + [Questions](./开发/大数据/questions.md)
 
-4. Logic & Probability
-   + [逻辑题目](./logic-probability/logic.md)
-   + [概率题目](./logic-probability/probability.md)
+5. 计算机基础     
+   + [操作系统](./计算机基础/opreating-systems.md)
+   + [计算机网络](./计算机基础/compute-networks.md) 
+   + [数据库](./计算机基础/数据库.md)
 
-5. cs subjects     
-   + [操作系统](./cs-subjects/opreating-systems.md)
-   + [计算机网络](./cs-subjects/compute-networks.md) 
-   + [数据库](./cs-subjects/dbms.md)
-
-6. DL       
-   + 深度学习基础
+5. DL
 
 ### 图像处理算法工程师
 1. CV       
@@ -70,5 +77,4 @@
 ## 使用方法：
 面试之前能够花半天时间翻一翻的面试笔记，翻看不是目的，目的是翻看时候的温故、知新和信心。建议每个求职者根据自己的面试经验和项目情况填充该框架，加入自己的理解与感悟，把知识内化于心，刻上自己的印记。
 对于有充足的时间准备面试的小伙伴，不妨将框架中涉及的内容深入学习理解，如果能加上实践项目进行理解，可谓锦上添花。
-
 
