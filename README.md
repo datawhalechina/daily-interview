@@ -27,22 +27,61 @@
 以面试岗位为梳理主线，整理面试之前必看的面试题目，给出高频的面试知识点和面试题。
 
 ### 机器学习算法工程师
-1. 机器学习
-   + [Decision Tree](./AI算法/AI算法/machine-learning/DecisionTree.md)
-   + [Adaboost](./AI算法/machine-learning/Adaboost.md)
-   + [Frequent Pattern](./AI算法/machine-learning/frequent_pattern.md)
-   + [Tree Embedding](./AI算法/machine-learning/tree_embedding.md)
-   + [Kmeans](./AI算法/machine-learning/kmeans.md)
-   + [Logistic regression](./AI算法/machine-learning/logistic_regression.md)
-   + [K-nearest neighbor](./AI算法/machine-learning/kNN.md)
-   + [SVM](./AI算法/machine-learning/SVM.md)
-   + [NaïveBayes](./AI算法/machine-learning/NaïveBayes.md)
-   + [Metrics](./AI算法/machine-learning/metrics.md)
-   + [HMM](./AI算法/machine-learning/HMM.md)
-   + [CRF](./AI算法/machine-learning/CRF.md)
-   + Features selection
-   + Optimizers
+1. **机器学习面试题**
+   - 机器学习基础
+     - [Metrics](./AI算法/machine-learning/metrics.md)
+     - [过拟合和欠拟合](./AI算法/machine-learning/过拟合和欠拟合.md)
+     - [梯度下降](./AI算法/machine-learning/梯度下降.md)
+     - [ABTest](./AI算法/machine-learning/ABTest.md)
+   - 机器学习算法
+     - [线性回归+逻辑回归](./AI算法/machine-learning/线性回归+逻辑回归.md)
+
+     - [SVM](./AI算法/machine-learning/SVM.md)
+       
+       
+       
+     - [Decision Tree](./AI算法/AI算法/machine-learning/DecisionTree.md)
+
+     - [Tree Embedding](./AI算法/machine-learning/TreeEmbedding.md)
+
+     - [EnsembleLearning](./AI算法/machine-learning/EnsembleLearning.md)
+
+     - [Adaboost](./AI算法/machine-learning/Adaboost.md)
+
+     - [XGBoost](./AI算法/machine-learning/XGBoost.md)
+
+     - [LightGBM](./AI算法/machine-learning/LightGBM.md)
+
+     - [Catboost](./AI算法/machine-learning/Catboost.md)
    
+       
+
+     - [Kmeans](./AI算法/machine-learning/Kmeans.md)
+
+     - [K-nearest neighbor](./AI算法/machine-learning/KNN.md)
+
+     - 
+
+     - [NaïveBayes](./AI算法/machine-learning/NaïveBayes.md)
+
+     - [HMM](./AI算法/machine-learning/HMM.md)
+
+     - [CRF](./AI算法/machine-learning/CRF.md)
+
+     - [Apriori](./AI算法/machine-learning/Apriori.md)
+
+     - [Frequent Pattern](./AI算法/machine-learning/FrequentPattern.md)
+
+
+
+   - 深度学习算法
+
+     - [w2v+tf-idf](./AI算法/machine-learning/w2v+tf-idf.md)
+
+       
+
+     
+
 2. 数据结构与算法
    + [数组](./数据结构与算法/Array.md)
    + [排序](./数据结构与算法/sort.md)
@@ -54,17 +93,14 @@
    + [搜索](./数据结构与算法/search.md)
    + [动态规划](./数据结构与算法/dp.md)
    + 其他
-
 3. Big data
    + [MapReduce](./开发/大数据/mapreduce.md)
    + [Technology](./开发/大数据/Technology.md)
    + [Questions](./开发/大数据/questions.md)
-
-5. 计算机基础     
+4. 计算机基础     
    + [操作系统](./计算机基础/操作系统.md)
    + [计算机网络](./计算机基础/计算机网络.md) 
    + [数据库](./计算机基础/数据库.md)
-
 5. DL
 
 ### 图像处理算法工程师
