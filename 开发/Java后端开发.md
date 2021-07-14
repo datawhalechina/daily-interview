@@ -1,8 +1,16 @@
 # Java 基础
 
-## 1.`HashMap` 底层实现
+## 1. `HashMap` 的底层原理，1.8与1.7的区别
 
 ## 2. `String` 、`StringBuffer` 、`StringBuilder`
+
+## 3.强引用和弱引用的区别
+
+## 4.CAS和ABA问题
+
+## 5.原子类的实现原理
+
+
 
 # Java并发
 
@@ -202,6 +210,8 @@ select * from tb_student  A where A.age='18' and A.name='张三';
 
 ## 9.索引怎么优化
 
+## 10.隔离级别
+
 
 
 # Redis
@@ -227,6 +237,16 @@ select * from tb_student  A where A.age='18' and A.name='张三';
 **缺点**：如果采用这种方案，对某个 `redis master` 实例，写入 `mylock` 这种锁的 `value`，此时异步复制给对应的 `master slave` 实例，这个过程中一旦 `redis master` 宕机，`redis slave` 就变成了 `redis master` 会导致客户端2尝试加锁时，在新的`redis master `上完成了加锁，而客户端1也以为自己成功加了锁。导致多个客户端对一个分布式锁完成了加锁，导致各种脏数据产生。【`redis` 主从架构的主从异步复制导致 `redis` 分布式锁的最大缺陷】
 
 ## 2.跳表数据结构，`redis` 中哪里用到了跳表
+
+## 3.出现缓存雪崩、击穿、穿透的情况及解决方法
+
+## 4.持久化策略原理、实现细节及应用场景
+
+## 5.主从复制原理及故障恢复
+
+## 6.数据库缓存一致性
+
+
 
 
 
