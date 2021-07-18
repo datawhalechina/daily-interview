@@ -1,16 +1,22 @@
+[TOC]
+
 # Java 基础
 
 ## 1. `HashMap` 的底层原理，1.8与1.7的区别
+
+### 1.1 扩容因子默认为什么是0.75
+
+### 1.2 为什么链表长度为8要转化为红黑树
 
 ## 2. `String` 、`StringBuffer` 、`StringBuilder`
 
 ## 3.强引用和弱引用的区别
 
-## 4.CAS和ABA问题
+## 4.`CAS` 和 `ABA` 问题
 
 ## 5.原子类的实现原理
 
-
+## 6.说一下 `CurrentHashMap` 如何实现线程安全的
 
 # Java并发
 
@@ -141,6 +147,12 @@ class Singleton{
 
 ## 3.垃圾收集算法，为什么新生代用标记-复制老年代用标记-整理
 
+## 4.类加载流程
+
+## 5.双亲委派机制，怎么样会打破双亲委派模型
+
+
+
 # 数据库
 
 ##  1.`MySQL`的引擎了解吗？默认的是哪个？`InnoDB `和 `myISAM` 的区别？
@@ -212,6 +224,8 @@ select * from tb_student  A where A.age='18' and A.name='张三';
 
 ## 10.隔离级别
 
+## 11.慢 `sql` 分析优化
+
 
 
 # Redis
@@ -246,9 +260,13 @@ select * from tb_student  A where A.age='18' and A.name='张三';
 
 ## 6.数据库缓存一致性
 
+## 7.`AOF` 和 `RDB` 有啥优缺点
 
+## 8.`redis` 的 `key` 的过期策略
 
+## 9.`redis` 是单线程的吗，为什么这么快
 
+## 10.`zset` 底层实现
 
 
 
