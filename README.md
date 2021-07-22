@@ -30,47 +30,60 @@
 1. **机器学习面试题**
    - 机器学习基础
      - [Metrics](./AI算法/machine-learning/metrics.md)
-     - [过拟合和欠拟合](./AI算法/machine-learning/过拟合和欠拟合.md)
+     - [过拟合与欠拟合](./AI算法/machine-learning/过拟合与欠拟合.md)
      - [梯度下降](./AI算法/machine-learning/梯度下降.md)
      - [ABTest](./AI算法/machine-learning/ABTest.md)
+     
    - 机器学习算法
+     
      - [线性回归+逻辑回归](./AI算法/machine-learning/线性回归+逻辑回归.md)
-
+     
      - [SVM](./AI算法/machine-learning/SVM.md)
        
        
        
      - [Decision Tree](./AI算法/AI算法/machine-learning/DecisionTree.md)
-
+     
      - [Tree Embedding](./AI算法/machine-learning/TreeEmbedding.md)
-
+     
      - [EnsembleLearning](./AI算法/machine-learning/EnsembleLearning.md)
-
+     
      - [Adaboost](./AI算法/machine-learning/Adaboost.md)
-
+     
      - [XGBoost](./AI算法/machine-learning/XGBoost.md)
-
+     
      - [LightGBM](./AI算法/machine-learning/LightGBM.md)
-
+     
      - [Catboost](./AI算法/machine-learning/Catboost.md)
-   
+     
        
-
+     
      - [Kmeans](./AI算法/machine-learning/Kmeans.md)
-
+     
      - [K-nearest neighbor](./AI算法/machine-learning/KNN.md)
-
-     - 
-
+     
+       
+     
      - [NaïveBayes](./AI算法/machine-learning/NaïveBayes.md)
-
+     
      - [HMM](./AI算法/machine-learning/HMM.md)
-
+     
      - [CRF](./AI算法/machine-learning/CRF.md)
-
+     
      - [Apriori](./AI算法/machine-learning/Apriori.md)
-
+     
      - [Frequent Pattern](./AI算法/machine-learning/FrequentPattern.md)
+     
+     
+     
+     - [Prophet](./AI算法/machine-learning/Prophet.md)
+     
+     - [ARIMA]()
+     
+       
+     
+
+
 
 
 
