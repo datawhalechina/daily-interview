@@ -26,7 +26,11 @@
 
 ## 10.分库分表怎么做，可能会遇到什么问题
 
+## 11.反射机制
 
+## 12.`==`和 `equals` 区别
+
+## 13.`Object` 类的 `hashcode` 方法的作用
 
 # Java并发
 
@@ -236,7 +240,15 @@ select * from tb_student  A where A.age='18' and A.name='张三';
 
 ## 11.慢 `sql` 分析优化
 
+# Spring
 
+## 1.`Sping IOC AOP` 的实现原理
+
+## 2.`Spring` 事物的实现原理
+
+## 3.`bean` 的生命周期
+
+##  
 
 # Redis
 
