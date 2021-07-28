@@ -24,7 +24,7 @@
 
     给定 n×n 输入，f×f 卷积核，padding p，stride s，输出的尺寸为：
     $$
-    \lfloor \frac{n+2p-f}{s} + 1 \rfloor \times \lfloor \frac{n+2p-f}{s} + 1 \rfloo
+    \lfloor \frac{n+2p-f}{s} + 1 \rfloor \times \lfloor \frac{n+2p-f}{s} + 1 \rfloor
     $$
     
 5. Attention 机制
@@ -77,3 +77,30 @@
     Feature-Based 微调，预训练模型作为纯粹的表征抽取器，表征依赖微调任务网络结构适配（任务缩放因子 γ）。
 
     ELMO 的缺点主要包括：不完全的双向预训练（Bi 是分开的，仅在 Loss 合并）；需要进行任务相关的网络设计（每种下游任务都要特定的设计）；仅有词向量无句向量（没有句向量任务）。
+    
+13. GPT？
+
+    使用 Transformer 的 Decoder 替换 LSTM 作为特征提取器。
+
+    Model-Based 微调，预训练模型作为任务网络的一部分参与任务学习，简化了下游任务架构设计。
+
+    GPT 的缺点包括：单项预训练模型；仅有词向量无句向量（仅学习语言模型）。
+
+14. BERT？
+
+    使用 Transformer Encoder 作为特征提取器，交互式双向语言建模（MLM），Token 级别+句子级别任务（MLM+NSP），两阶段预训练。
+
+    Feature-Based 和 Model-Based，实际一般使用 Model-Based。
+
+    BERT 的缺点是：字粒度难以学到词、短语、实体的完整语义。
+
+15. ERNIE：
+
+    对 BERT 的缺点进行了优化，Mask 从字粒度的 Token 修改为完整的词或实体。ERNIE2.0 引入更多的预训练任务以捕捉更丰富的语义知识。
+
+16. Transformer 中为什么用 Add 而不是 Concat？
+
+    在 Embedding 中，Add 等价于 Concat，三个 Embedding 相加与分别 One-Hot Concat 效果相同。
+
+17. Dropout 作用、原理和实现？
+

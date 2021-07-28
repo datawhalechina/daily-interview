@@ -7,4 +7,4 @@
     - Batch Normalization
     - 残差连接
     - LSTM、GRU 等架构
-
+3. 推理时 BN 和 LN 如何处理？
