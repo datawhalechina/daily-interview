@@ -240,6 +240,10 @@ select * from tb_student  A where A.age='18' and A.name='张三';
 
 ## 11.慢 `sql` 分析优化
 
+## 12.死机了数据怎么恢复？有几种`log` 形式
+
+
+
 # Spring
 
 ## 1.`Sping IOC AOP` 的实现原理
