@@ -6,7 +6,7 @@ metric主要用来评测机器学习模型的好坏程度,不同的任务应该�
 
 平均绝对误差MAE（Mean Absolute Error）又被称为 L1范数损失。
 $$
-MAE=\frac{1}{n}\sum_{i=1}^{n}|y_i-\hat{y}_i| \tag{3}
+MAE=\frac{1}{n}\sum_{i=1}^{n}|y_i-\hat{y}_i| \tag{1}
 $$
 MAE虽能较好衡量回归模型的好坏，但是绝对值的存在导致函数不光滑，在某些点上不能求导，可以考虑将绝对值改为残差的平方，这就是均方误差。
 
@@ -14,13 +14,13 @@ MAE虽能较好衡量回归模型的好坏，但是绝对值的存在导致函�
 
 均方误差MSE（Mean Squared Error）又被称为 L2范数损失 。
 $$
-MSE=\frac{1}{n}\sum_{i=1}^{n}(y_i-\hat{y}_i)^2 \tag{1}
+MSE=\frac{1}{n}\sum_{i=1}^{n}(y_i-\hat{y}_i)^2 \tag{2}
 $$
 由于MSE与我们的目标变量的量纲不一致，为了保证量纲一致性，我们需要对MSE进行开方 。
 
 ### 均方根误差(RMSE)
 $$
-RMSE=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i-\hat{y}_i)^2} \tag{2}
+RMSE=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i-\hat{y}_i)^2} \tag{3}
 $$
 
 
@@ -49,11 +49,11 @@ $$
 
 
 $$
-Acc(y,\hat{y})=\frac{1}{n}\sum_{i=1}^{n}y_i=\hat{y_i} \tag{5}
+Acc(y,\hat{y})=\frac{1}{n}\sum_{i=1}^{n}y_i=\hat{y_i} \tag{6}
 $$
 
 $$
-Error(y, \hat{y})=1-acc(y,\hat{y}) \tag{6}
+Error(y, \hat{y})=1-acc(y,\hat{y}) \tag{7}
 $$
 Acc与Error平等对待每个类别，即每一个样本判对 (0) 和判错 (1) 的代价都是一样的。使用Acc与Error作为衡量指标时，需要考虑样本不均衡问题以及实际业务中好样本与坏样本的重要程度。
 
@@ -75,14 +75,14 @@ Acc与Error平等对待每个类别，即每一个样本判对 (0) 和判错 (1)
 
 Precision 是分类器预测的正样本中预测正确的比例，取值范围为[0,1]，取值越大，模型预测能力越好。
 $$
-P=\frac{TP}{TP+FP} \tag{7}
+P=\frac{TP}{TP+FP} \tag{8}
 $$
 
 ### 召回率（查全率）Recall
 
 Recall 是分类器所预测正确的正样本占所有正样本的比例，取值范围为[0,1]，取值越大，模型预测能力越好。
 $$
-R=\frac{TP}{TP+FN} \tag{8}
+R=\frac{TP}{TP+FN} \tag{9}
 $$
 
 
@@ -90,11 +90,11 @@ $$
 
 Precision和Recall 是互相影响的，理想情况下肯定是做到两者都高，但是一般情况下Precision高、Recall 就低， Recall 高、Precision就低。为了均衡两个指标，我们可以采用Precision和Recall的加权调和平均（weighted harmonic mean）来衡量，即F1 Score
 $$
-\frac{1}{F_1}=\frac{1}{2} \cdot (\frac{1}{P}+\frac{1}{R}) \tag{9}
+\frac{1}{F_1}=\frac{1}{2} \cdot (\frac{1}{P}+\frac{1}{R}) \tag{10}
 $$
 
 $$
-F_1=\frac{2*P*R}{P+R} \tag{10}
+F_1=\frac{2*P*R}{P+R} \tag{11}
 $$
 
 
@@ -104,14 +104,14 @@ ROC全称是"受试者工作特征"(Receiver Operating Characteristic)曲线. RO
 - y 轴为真阳性率（TPR）：在所有的正样本中，分类器预测正确的比例（等于Recall）
 
 $$
-TPR=\frac{TP}{TP+FN} \tag{11}
+TPR=\frac{TP}{TP+FN} \tag{12}
 $$
 
 - x 轴为假阳性率（FPR）：在所有的负样本中，**分类器预测错误的比例**
 
 
 $$
-FPR=\frac{FP}{TN+FP} \tag{12}
+FPR=\frac{FP}{TN+FP} \tag{13}
 $$
 
 
@@ -139,7 +139,7 @@ $$
 \begin{array}{l}
 \mathrm{TPR}=\frac{\mathrm{TP}}{\mathrm{TP}+\mathrm{FN}} \\
 \mathrm{FPR}=\frac{\mathrm{FP}}{\mathrm{FP}+\mathrm{TN}}
-\end{array} \tag{13}
+\end{array} \tag{14}
 $$
 随着阈值t的变化，TPR和FPR在坐标图上形成一条曲线，这条曲线就是ROC曲线。 显然，如果模型是随机的，模型得分对正负样本没有区分性，那么得分大于t的样本中，正负样本比例和总体的正负样本比例应该基本一致。
 
@@ -149,7 +149,7 @@ $$
 
 这里的x和y分别对应TPR和FPR，也是ROC曲线的横纵坐标。
 $$
-\mathrm{AUC}=\int_{t=\infty}^{-\infty} y(t) d x(t) \tag{14}
+\mathrm{AUC}=\int_{t=\infty}^{-\infty} y(t) d x(t) \tag{15}
 $$
 
 
