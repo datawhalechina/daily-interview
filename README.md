@@ -120,8 +120,15 @@
 1. CV       
    + TODO 
 ### 自然语言处理算法工程师
-1. NLP      
-   + TODO
+
+1. NLP 算法与基础
+   - [词向量](./AI算法/NLP/word2vec.md)
+2. NLP 面试题
+   - [模型架构](./AI算法/NLP/model_arch.md)
+   - [训练方法](./AI算法/NLP/training_skill.md)
+   - [序列标注](./AI算法/NLP/sequence_tagging.md)
+   - [语义模型](./AI算法/NLP/semantic_analysis.md)
+   - [评估方法](./AI算法/NLP/evaluation.md)
 
 ### [Java 后端开发](./开发/Java后端开发.md)
 
