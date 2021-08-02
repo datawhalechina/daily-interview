@@ -121,14 +121,13 @@
    + TODO 
 ### 自然语言处理算法工程师
 
-1. NLP 算法与基础
-   - [词向量](./AI算法/NLP/word2vec.md)
-2. NLP 面试题
-   - [模型架构](./AI算法/NLP/model_arch.md)
-   - [训练方法](./AI算法/NLP/training_skill.md)
-   - [序列标注](./AI算法/NLP/sequence_tagging.md)
-   - [语义模型](./AI算法/NLP/semantic_analysis.md)
-   - [评估方法](./AI算法/NLP/evaluation.md)
+- 文本表示
+    - [文本结构理解](./AI算法/NLP/文本表示/文本结构理解.md)
+    - [文本表征方式](./AI算法/NLP/文本表示/文本表征方式.md)
+- 特征挖掘
+    - [基于深度学习的模型](./AI算法/NLP/特征挖掘/基于深度学习的模型.md)
+- 应用场景
+    - [NLG](./AI算法/NLP/应用场景/NLG.md)
 
 ### [Java 后端开发](./开发/Java后端开发.md)
 
