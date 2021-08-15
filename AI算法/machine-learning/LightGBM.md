@@ -1,3 +1,5 @@
+![](img/LightGBM/LightGBM.PNG)
+
 ### 1. 简单介绍一下LightGBM？
 
 从 LightGBM 名字我们可以看出其是轻量级（Light）的梯度提升机（GBM），其相对 XGBoost 具有训练速度快、内存占用低的特点。
