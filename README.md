@@ -12,7 +12,10 @@
 
 ## 内容：
 
-![计算机](https://tva1.sinaimg.cn/large/008i3skNgy1gq44djbyncj30u018ygps.jpg)
+<div align=center>
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gq44djbyncj30u018ygps.jpg" width="500px">
+</div>
+
 
 使用指南：
 
@@ -117,8 +120,8 @@
 5. DL
 
 ### 图像处理算法工程师
-1. CV       
-   + TODO 
+- 基础知识
+    - [CV基础](./AI算法/CV/CV基础.md)
 ### 自然语言处理算法工程师
 
 - 文本表示
