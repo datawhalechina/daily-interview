@@ -1,4 +1,4 @@
-# Daily Interview
+# daily Interview
 
 ## 背景
 
@@ -116,10 +116,20 @@
 - 应用场景
     - [NLG](./AI算法/NLP/应用场景/NLG.md)
 
-### [前端开发](./开发/前端开发/README.md)
+### 前端开发
+- [基础知识](./开发/前端开发/README.md)
 
-### [Java 后端开发](./开发/Java后端开发.md)
+### Java 后端开发
+- [基础知识](./开发/Java后端开发.md)
 
 ## 使用方法：
 面试之前能够花半天时间翻一翻的面试笔记，翻看不是目的，目的是翻看时候的温故、知新和信心。建议每个求职者根据自己的面试经验和项目情况填充该框架，加入自己的理解与感悟，把知识内化于心，刻上自己的印记。
 对于有充足的时间准备面试的小伙伴，不妨将框架中涉及的内容深入学习理解，如果能加上实践项目进行理解，可谓锦上添花。
+
+## 关注我们
+"Datawhale是一个专注AI领域的开源组织，以“for the learner，和学习者一起成长”为愿景，构建对学习者最有价值的开源学习社区。关注我们，一起学习成长。"
+![58e6c48f92be46e0d8104eaf60dbc5e](https://user-images.githubusercontent.com/46125325/131243620-5d2e36c6-c197-480f-b48b-2dd3ff562b2b.png)
+
+## LICENSE
+<a rel="license" href=" ">< img alt="知识共享许可协议" style="border-width:0" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" /></ a><br />
+本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</ a>进行许可。
