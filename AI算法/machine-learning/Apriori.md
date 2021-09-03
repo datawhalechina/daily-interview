@@ -114,6 +114,3 @@
   称关联规则$X\Rightarrow Y$为强关联规则,否则称关联规则$X\Rightarrow Y$为弱关联规则。在挖掘关联规则时,产生的关联规则要经过$\min sup$和$\min conf$的衡量筛选出来的强关联规则才能用商家的决策 
 
 
-
-<iframe height=498 width=510 src="https://www.bilibili.com/video/av80396534?from=search&seid=4799266719270840075"  controls="controls" width="500" height="300" >
-
