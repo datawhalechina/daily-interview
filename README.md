@@ -40,7 +40,7 @@
 
      - [线性回归+逻辑回归](./AI算法/machine-learning/线性回归+逻辑回归.md)
      - [SVM](./AI算法/machine-learning/SVM.md)
-     - [Decision Tree](./AI算法/AI算法/machine-learning/DecisionTree.md)
+     - [Decision Tree](./AI算法/machine-learning/DecisionTree.md)
      - [EnsembleLearning](./AI算法/machine-learning/EnsembleLearning.md)
      - [Adaboost](./AI算法/machine-learning/Adaboost.md)
      - [XGBoost](./AI算法/machine-learning/XGBoost.md)
