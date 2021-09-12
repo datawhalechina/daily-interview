@@ -2,7 +2,7 @@
 ## 1. 为什么需要做特征归一化、标准化？  
   - 使不同量纲的特征处于同一数值量级，减少方差大的特征的影响，使模型更准确。  
   - 加快学习算法的收敛速度。  
-  **参考资料**:  [归一化 （Normalization）、标准化 （Standardization）和中心化/零均值化 （Zero-centered）](https://www.jianshu.com/p/95a8f035c86c)，《白面机器学习》
+  **参考资料**:  [归一化 （Normalization）、标准化 （Standardization）和中心化/零均值化 （Zero-centered）](https://www.jianshu.com/p/95a8f035c86c)，《百面机器学习》
   
 ## 2. 常用常用的归一化和标准化的方法有哪些？  
  - 线性归一化（min-max标准化）  
