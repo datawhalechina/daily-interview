@@ -120,3 +120,4 @@ LightGBM采用 many-vs-many 的切分方式将类别特征分为两个子集，�
 
 决策树（下）——XGBoost、LightGBM（非常详细） - 阿泽的文章 - 知乎 https://zhuanlan.zhihu.com/p/87885678
 
+Lightgbm如何处理类别特征： https://blog.csdn.net/anshuai_aw1/article/details/83275299
