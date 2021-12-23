@@ -7,4 +7,4 @@
  
 
 [GitHub](https://github.com/datawhalechina/daily-interview.git)
-[Get Started](#quick-start)
+<!-- [Get Started](#quick-start) -->
