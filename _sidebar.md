@@ -19,8 +19,8 @@
       - [XGBoost](./AI算法/machine-learning/XGBoost.md)
       - [LightGBM](./AI算法/machine-learning/LightGBM.md)
       - [Catboost](./AI算法/machine-learning/Catboost.md)
-      - [Kmeans](./AI算法/machine-learning/Kmeans.md)
-      - [K-nearest neighbor](./AI算法/machine-learning/KNN.md)
+      - [KMeans](./AI算法/machine-learning/KMeans.md)
+      - [KNN](./AI算法/machine-learning/KNN.md)
       - [NaïveBayes](./AI算法/machine-learning/NaïveBayes.md)
       - [CRF](./AI算法/machine-learning/CRF.md)
       - [Apriori](./AI算法/machine-learning/Apriori.md)
@@ -56,7 +56,8 @@
 
       - [文本结构理解](./AI算法/NLP/文本表示/文本结构理解.md)
       - [文本表征方式](./AI算法/NLP/文本表示/文本表征方式.md)
-      - [基于深度学习的模型](./AI算法/NLP/特征挖掘/基于深度学习的模型.md)
+      - [特征挖掘-基于深度学习的模型](./AI算法/NLP/特征挖掘/基于深度学习的模型.md)
+      - [特征挖掘-Bert](./AI算法/NLP/特征挖掘/Bert/Bert面试题.md)
       - [NLG应用场景](./AI算法/NLP/应用场景/NLG.md)
 
   - 前端开发
