@@ -1,6 +1,6 @@
 # 校招前端常见面试问题整理
 
-[JavaScript 相关问题](./【1】javascript.md)
+[JavaScript 相关问题](【1】javascript.md)
 <br/>
 
 [HTML 相关问题](./【2】html.md)
