@@ -2,7 +2,7 @@
 
 
 
-[TOC]
+
 
 # Adaboost 算法介绍
 

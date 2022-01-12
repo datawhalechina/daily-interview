@@ -1,6 +1,6 @@
 ![](img/LightGBM/LightGBM.PNG)
 
-[TOC]
+
 
 # LightGBM面试题
 
