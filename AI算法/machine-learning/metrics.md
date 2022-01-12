@@ -31,11 +31,11 @@ $$
 ### R2_score
 
 $$
-R2_{score} =1-\frac{\sum^n_{i}\left(y_{i}-\hat{y}\right)^{2} / n}{\sum^n_{i}\left(y_{i}-\bar{y}\right)^{2} / n}=1-\frac{M S E}{\operatorname{Var}}	\tag{4}
+R2_score =1-\frac{\sum^n_{i}\left(y_{i}-\hat{y}\right)^{2} / n}{\sum^n_{i}\left(y_{i}-\bar{y}\right)^{2} / n}=1-\frac{M S E}{\operatorname{Var}}	\tag{4}
 $$
 
 
-$R2\_{score}$又称决定系数，表示反应因变量的全部变异能通过数学模型被自变量解释的比例, $R2\_{score}$越大，模型准确率越好。
+$R2_score$又称决定系数，表示反应因变量的全部变异能通过数学模型被自变量解释的比例, $R2\_{score}$越大，模型准确率越好。
 
 $y$表示实际销量,$\hat{y}$表示预测销量,$\bar{y}$表示实际销量的均值,$n$表示样本数,$i$表示第$i$个样本。$Var$表示实际值的方差，也就是销量的变异情况。
 
