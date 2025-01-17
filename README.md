@@ -13,7 +13,7 @@
 ## 内容
 
 <div align=center>
-<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gq44djbyncj30u018ygps.jpg" width="400px">
+<img src="https://github.com/datawhalechina/daily-interview/blob/master/content.png" width="400px">
 </div>
 
 
