@@ -34,6 +34,10 @@
 
 如果你也喜欢这个项目，想参与到面经项目中来，可以与我们联系 E-mail:xiongweinie@foxmail.com
 
+## 更新日志
+
+- 20250715 新增加大语言模型相关的面试资料 `./AI算法/大语言模型`
+
 ## 关注我们
 <div align=center>
 <p>扫描下方二维码关注公众号：Datawhale</p>
