@@ -1,0 +1,117 @@
+// 自定义样式
+.home .hero img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.home .features {
+  border-top: 1px solid #eaecef;
+  padding: 1.2rem 0;
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: stretch;
+  justify-content: space-between;
+}
+
+.home .feature {
+  flex-grow: 1;
+  flex-basis: 30%;
+  max-width: 30%;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 719px) {
+  .home .feature {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+// 代码块样式优化
+.theme-default-content pre, .theme-default-content pre[class*="language-"] {
+  line-height: 1.4;
+  padding: 1.25rem 1.5rem;
+  margin: 0.85rem 0;
+  background-color: #282c34;
+  border-radius: 6px;
+  overflow: auto;
+}
+
+// 表格样式优化
+.theme-default-content table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.theme-default-content tr {
+  border-top: 1px solid #dfe2e5;
+}
+
+.theme-default-content tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.theme-default-content th, .theme-default-content td {
+  border: 1px solid #dfe2e5;
+  padding: 0.6em 1em;
+}
+
+// 侧边栏样式优化
+.sidebar-group.is-sub-group > .sidebar-group-items {
+  padding-left: 1rem;
+}
+
+.sidebar-group .sidebar-group {
+  padding-left: 0.5em;
+}
+
+// 导航栏样式
+.navbar .links {
+  padding-left: 1.5rem;
+}
+
+// 内容区域优化
+.theme-default-content:not(.custom) {
+  max-width: 900px;
+}
+
+// 搜索框样式
+.search-box input {
+  cursor: text;
+  width: 10rem;
+  height: 2rem;
+  color: #4e6e8e;
+  display: inline-block;
+  border: 1px solid #cfd4db;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  line-height: 2rem;
+  padding: 0 0.5rem 0 2rem;
+  outline: none;
+  transition: all 0.2s ease;
+  background: #fff url('/search.svg') 0.6rem 0.5rem no-repeat;
+  background-size: 1rem;
+}
+
+.search-box input:focus {
+  cursor: auto;
+  border-color: #3eaf7c;
+}
+
+// 响应式优化
+@media (max-width: 959px) {
+  .theme-default-content:not(.custom) {
+    padding: 2rem 1.5rem 0;
+  }
+}
+
+@media (max-width: 719px) {
+  .theme-default-content:not(.custom) {
+    padding: 1.5rem 1rem 0;
+  }
+}

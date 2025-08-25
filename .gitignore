@@ -123,3 +123,36 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+# VuePress 相关文件
+# VuePress 构建输出
+docs/.vuepress/dist/
+
+# VuePress 临时文件和缓存
+docs/.vuepress/.temp/
+docs/.vuepress/.cache/
+.temp/
+
+# Node.js 依赖
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 包管理器锁文件
+package-lock.json
+
+# 运行时数据
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+docs-old/

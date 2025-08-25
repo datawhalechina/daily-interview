@@ -1,0 +1,49 @@
+name: Deploy VuePress to GitHub Pages
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        # 获取所有历史记录，以便正确生成最后更新时间
+        fetch-depth: 0
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Build VuePress site
+      run: npm run build
+    
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+        # 可选：自定义域名
+        # cname: your-domain.com
+        
+    # 可选：部署到其他分支进行预览
+    - name: Deploy to preview branch
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.event_name == 'pull_request'
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+        publish_branch: gh-pages-preview
+        destination_dir: pr-${{ github.event.number }}
