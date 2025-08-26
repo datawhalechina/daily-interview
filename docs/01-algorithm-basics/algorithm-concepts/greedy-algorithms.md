@@ -252,4 +252,4 @@ int solve(vector<int> &h) {
     }
     return ans;
 }
-```
+```cpp

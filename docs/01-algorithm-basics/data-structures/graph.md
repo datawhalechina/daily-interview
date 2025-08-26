@@ -1,33 +1,33 @@
-# Graph(�?
-在面试的过程�?一般不会考到图相关的问题,因为图相关的问题�?而且描述起来很麻�?
-但是也会问道一下常见的问题,比如,最短路�?最小支撑树,拓扑排序都被问到�?
+# Graph(图)
+在面试的过程中,一般不会考到图相关的问题,因为图相关的问题难,而且描述起来很麻烦.
+但是也会问道一下常见的问题,比如,最短路径,最小支撑树,拓扑排序都被问到过.
 
-1. 图常用的表示方法有两�? 分别是邻接矩阵和邻接�?
+1. 图常用的表示方法有两种: 分别是邻接矩阵和邻接表.
 邻接矩阵是不错的一种图存储结构,对于边数相对顶点较少的图,这种结构存在对存储空间的极大浪费. 
-因此,找到一种数组与链表相结合的存储方法称为邻接�?
+因此,找到一种数组与链表相结合的存储方法称为邻接表.
 
 + 邻接矩阵表示的无向图
 
-![图1](/images/g-1.png)
+<img src="/images/g-1.png">
 
-+ 邻接表表示的无向�?
++ 邻接表表示的无向图
 
-![图2](/images/g-2.png)
+<img src="/images/g-2.png">
 
 
-## 1. 最短路�?
+## 1. 最短路径
 + Dijkstra
-1. 维护一个最短路径的的集�?sptSet)和最短距离数�? 直到遍历所有的�? 初始化起始点的距离是0, 集合为空.
+1. 维护一个最短路径的的集合(sptSet)和最短距离数组, 直到遍历所有的点, 初始化起始点的距离是0, 集合为空.
 2. 初始化起始点s到所有的点的距离是INF, 注意s到s的距离是0.
 3. while sptSet 不包含所有的顶点:
     + 选择当前能到达点的最小距离的点u,加入 sptSet
-    + 使用u作为中间顶点,更新所有点的距�?选择最小距离的替换 
+    + 使用u作为中间顶点,更新所有点的距离,选择最小距离的替换 
     + dist[u]+graph[u][v] < dist[v]
 
 [百度百科](https://baike.baidu.com/item/%E8%BF%AA%E6%9D%B0%E6%96%AF%E7%89%B9%E6%8B%89%E7%AE%97%E6%B3%95/4049057?fr=aladdin)     
 [wikipedia](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
 
-```c++
+```cpp
 int minDistance(vector<int> dist, set<int> sptSet) {
     int min_d = INT_MAX, u;
     for(int i = 0, i < dist.size(); i ++) {
@@ -37,8 +37,8 @@ int minDistance(vector<int> dist, set<int> sptSet) {
     }
     return u;
 }
-// 使用vector 表示的邻接矩�? return 起始点到所有点的最小距�?
-// 没有边的�?填充
+// 使用vector 表示的邻接矩阵, return 起始点到所有点的最小距离
+// 没有边的用0填充
 vector<int> dijstra(vector<vector<int>> graph, set<int> &sptSet,int src) {
     int V = graph.size();
     vector<int> dist(V, 0);
@@ -63,7 +63,7 @@ vector<int> dijstra(vector<vector<int>> graph, set<int> &sptSet,int src) {
 
 ```
 + Floyd Warshall 
-Floyd算法是使用动态规划算�? dist[i][j]表示i-->j的最短距�?     
+Floyd算法是使用动态规划算法, dist[i][j]表示i-->j的最短距离,     
 那么是否存在i-->k-->j的路径小于dist[i][j],于是就有了下面的更新公式,  
 + if dist[i][k] + dist[k][j] < dist[i][j]: 
     dist[i][j] = dist[i][k] + dist[k][j]
@@ -71,10 +71,10 @@ Floyd算法是使用动态规划算�? dist[i][j]表示i-->j的最短距�?
 [百度百科](https://baike.baidu.com/item/floyd-warshall%E7%AE%97%E6%B3%95/9705345)    
 [wikipedia](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm)   
 
-```c++
+```cpp
 void floydWarshall(vector<vector<int> > graph, vector<vector<int>> &dist, vector<vector<int> > &path) {
     int V = graph.size();
-    // 参数dist和path需要初始化大小, 确定是否已经初始�?
+    // 参数dist和path需要初始化大小, 确定是否已经初始化
     vector<vector<int> > tmp(V, vector<int>(V));
     dist = path = tmp;
     for(int i = 0; i < V; i ++) {
@@ -94,7 +94,7 @@ void floydWarshall(vector<vector<int> > graph, vector<vector<int>> &dist, vector
         }
     }
 }
-//打印最短路�?u ---> v
+//打印最短路径 u ---> v
 int pfpath(int u, int v, vector<vector<int> > path) { 
     while(u != v) {
         cout << u  << " ";
@@ -105,16 +105,16 @@ int pfpath(int u, int v, vector<vector<int> > path) {
 ```
 ## 2. 最小支撑树
 + Prim Algorithm
-1. 用一个集合mstSet维护已经满足要求的顶�?
+1. 用一个集合mstSet维护已经满足要求的顶点
 2. 使用dist表示从mstSet集合某个点到u的最小距离为INF, 初始点Src的距离是0.
 3. while mstSet doesn't include all vertices:
-   + 选择一个不在mstSet�? 并且在dist中距离最小的顶点u, 加入到mstSet
-   + 使用u更新dist距离, 表示从mstSet某个点到达为使用的点的最小距�?
+   + 选择一个不在mstSet中, 并且在dist中距离最小的顶点u, 加入到mstSet
+   + 使用u更新dist距离, 表示从mstSet某个点到达为使用的点的最小距离
 
 [百度百科](https://baike.baidu.com/item/Prim/10242166)    
 [wikipedia](https://en.wikipedia.org/wiki/Prim%27s_algorithm)
 
-```c++
+```cpp
 int minDistance(vector<int> dist, set<int> mstSet) {
     int min_d = INT_MAX, u;
     for(int i = 0, i < dist.size(); i ++) {
@@ -124,12 +124,12 @@ int minDistance(vector<int> dist, set<int> mstSet) {
     }
     return u;
 }
-// 使用vector 表示的邻接矩�? return 起始点到所有点的最小距�?
-// 没有边的�?填充
+// 使用vector 表示的邻接矩阵, return 起始点到所有点的最小距离
+// 没有边的用0填充
 vector<int> dijstra(vector<vector<int>> graph, set<int> &mstSet,int src) {
     int V = graph.size();
     vector<int> dist(V, 0);
-    int parent[V]; // 每个顶点的相邻的�?
+    int parent[V]; // 每个顶点的相邻的点
     parent[src] = -1;
     for(int i = 0;i < V; i ++) {
         if(i != src) dist[i] = INT_MAX;
@@ -153,7 +153,7 @@ vector<int> dijstra(vector<vector<int>> graph, set<int> &mstSet,int src) {
 ```
 + Kruskal Algorithm
 
-1. 根据权重排序所有的�?
+1. 根据权重排序所有的边
 2. 选择一个小权重的边,如果它没有和最小支撑顶点形成环,就加入这个边
 3. 重复2,知道包含V-1个边
 
@@ -161,7 +161,7 @@ vector<int> dijstra(vector<vector<int>> graph, set<int> &mstSet,int src) {
 [wikipedia](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm)   
 [Code 抄写](https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/)
 
-```c++
+```cpp
 struct Edge { 
     int src, dest, weight; 
 }; 
@@ -227,23 +227,23 @@ void KruskalMST(struct Graph* graph) {
 } 
 ```
 ## 3. 拓扑排序
-**定义**: 对一个有向无环图(Directed Acyclic Graph简称DAG)G进行拓扑排序，是将G中所有顶点排成一个线性序列，使得图中任意一对顶点u和v，若�?u,v)∈E(G)，则u在线性序列中出现在v之前�?
+**定义**: 对一个有向无环图(Directed Acyclic Graph简称DAG)G进行拓扑排序，是将G中所有顶点排成一个线性序列，使得图中任意一对顶点u和v，若边(u,v)∈E(G)，则u在线性序列中出现在v之前。
 1. 计算所有节点的入度
-2. 每次选择一个入度为0的顶点u,如果的已经排序的结果�?
-3. 将u所到达的所有顶点v,入度�?, 
-4. 重复1,2,直到遍历所有顶�?
+2. 每次选择一个入度为0的顶点u,如果的已经排序的结果中
+3. 将u所到达的所有顶点v,入度减1, 
+4. 重复1,2,直到遍历所有顶点
 
 [百度百科](https://baike.baidu.com/item/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/5223807?fr=aladdin)    
 [wikipedia](https://en.wikipedia.org/wiki/Topological_sorting)
 
-```c++
+```cpp
 class Graph { 
-    int V;  // 顶点的个�?
+    int V;  // 顶点的个数
     list<int> *adj; // 所有顶点的起始指针
 };
 
 void topologicalSort(int V, list<int> *adj) { 
-    // 计算所有入�?
+    // 计算所有入度
     vector<int> in_degree(V, 0);   
     for (int u=0; u<V; u++) { 
         list<int>::iterator itr; 
@@ -251,7 +251,7 @@ void topologicalSort(int V, list<int> *adj) {
              in_degree[*itr]++; 
         }
     } 
-    // 加入入度�?的点
+    // 加入入度为0的点
     queue<int> q; 
     for (int i = 0; i < V; i++) { 
         if (in_degree[i] == 0) q.push(i); 
@@ -278,13 +278,13 @@ void topologicalSort(int V, list<int> *adj) {
     cout << endl; 
 } 
 ```
-## 4. 有向图判�?
-**题目**: 请你判断一�?n 个点，m 条边的有向图是否存在环。参数为两个int数组，start[i]到end[i]有一条有向边.     
-**解析**: 这是拓扑排序的一种应�?
+## 4. 有向图判环
+**题目**: 请你判断一个 n 个点，m 条边的有向图是否存在环。参数为两个int数组，start[i]到end[i]有一条有向边.     
+**解析**: 这是拓扑排序的一种应用.
 
-```c++
+```cpp
 bool isCyclicGraph(vector<int> &start, vector<int> &end) {
-    // 找到最大顶点�?构造图,
+    // 找到最大顶点值,构造图,
     int n = 0;
     for (int s : start) {
         n = max(n, s);
@@ -311,7 +311,7 @@ bool isCyclicGraph(vector<int> &start, vector<int> &end) {
     while (!que.empty()) {
         int h = que.front();
         que.pop();
-        // 将多有入度为0的点,对应的顶�?入度减去1
+        // 将多有入度为0的点,对应的顶点 入度减去1
         for (int y : graph[h]) {
             d[y]--;
             if (!d[y]) {
@@ -319,7 +319,7 @@ bool isCyclicGraph(vector<int> &start, vector<int> &end) {
             }
         }
     }
-    // 判断是否所有顶点的入度都是0, 如果�?则没有环,否则就有
+    // 判断是否所有顶点的入度都是0, 如果是,则没有环,否则就有
     for (int i = 1; i <= n; i++) {
         if (d[i]) {
             return true;
@@ -329,7 +329,7 @@ bool isCyclicGraph(vector<int> &start, vector<int> &end) {
 }
 ```
 
-# 参�?
+# 参考
 1. https://www.cnblogs.com/Ash-ly/p/5920953.html
 2. https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/
 3. 

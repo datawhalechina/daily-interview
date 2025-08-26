@@ -2,7 +2,7 @@
 
 ## 📂 分类目录
 
-### �?[Java](Java/)
+### ☕ [Java](Java/)
 - [Java基础](Java/java-fundamentals.md)
 
 ### 🌐 [JavaScript](JavaScript/)

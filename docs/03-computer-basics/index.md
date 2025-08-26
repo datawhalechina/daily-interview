@@ -9,7 +9,7 @@
 - [网络协议](computer-network/network-protocols.md)
 - [HTTP协议](computer-network/http-protocol.md)
 
-### 🗄�?[数据库](database/)
+### 🗄️ [数据库](database/)
 - [SQL基础](database/sql-fundamentals.md)
 
 ### 📊 [数学基础](mathematics/)
