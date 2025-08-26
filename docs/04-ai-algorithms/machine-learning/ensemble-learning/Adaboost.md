@@ -1,4 +1,4 @@
-![Adboost框架图](img/Adaboost/Adboost框架图.png)
+![Adboost框架图](/images/Adaboost/Adboost框架图.png)
 
 
 

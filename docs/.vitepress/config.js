@@ -15,6 +15,7 @@ export default defineConfig({
             { text: '系统设计', link: '/05-system-design/' },
             { text: '开发技术', link: '/06-development-tech/' },
             { text: '项目经验', link: '/07-project-experience/' },
+            { text: '行为面试', link: '/08-behavioral-interview/' },
             { text: '面试技巧', link: '/09-interview-tips/' }
         ],
 
@@ -247,6 +248,14 @@ export default defineConfig({
                     text: '项目经验',
                     items: [
                         { text: '概述', link: '/07-project-experience/' }
+                    ]
+                }
+            ],
+            '/08-behavioral-interview/': [
+                {
+                    text: '行为面试',
+                    items: [
+                        { text: '概述', link: '/08-behavioral-interview/' }
                     ]
                 }
             ],
