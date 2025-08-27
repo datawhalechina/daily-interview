@@ -1,4 +1,4 @@
-![LightGBM](/images/LightGBM/LightGBM.png)
+﻿![LightGBM](/images/LightGBM.png)
 
 
 

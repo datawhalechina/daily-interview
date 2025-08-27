@@ -1,101 +1,10 @@
-# 校招前端面试常见问题【3】——CSS
+﻿# 校招前端面试常见问题【3】——CSS
 
 ## 1、盒模型
 
 ### Q：请简述一下 CSS 盒模型？
 
-![盒模型](http://www.shadowingszy.top/images/box.png)
-
-W3C 模式：盒子宽=width+padding+border+margin
-怪异模式：盒子宽=width+margin
-
-### Q：inline、block、inline-block 元素的区别？
-
-inline（行内元素）:
-使元素变成行内元素，拥有行内元素的特性，即可以与其他行内元素共享一行，不会独占一行。
-不能更改元素的 height，width 的值，大小由内容撑开。
-可以使用 padding 上下左右都有效，margin 只有 left 和 right 产生边距效果，但是 top 和 bottom 就不行。
-
-block（块级元素）:
-使元素变成块级元素，独占一行，在不设置自己的宽度的情况下，块级元素会默认填满父级元素的宽度。
-能够改变元素的 height，width 的值。
-可以设置 padding，margin 的各个属性值，top，left，bottom，right 都能够产生边距效果。
-
-inline-block（融合行内于块级）:
-结合了 inline 与 block 的一些特点，结合了上述 inline 的第 1 个特点和 block 的第 2,3 个特点。
-用通俗的话讲，就是不独占一行的块级元素。
-
-## 2、选择器
-
-### Q：请列举出你用过的 CSS 选择器？
-
-普通选择器：
-|选择器|例子|描述|
-|-|-|-|
-|.class|.intro|选择 class="intro" 的所有元素。|
-|#id|#firstname|选择 id="firstname" 的元素。|
-|\*|\*|选择所有元素|
-|element|p| 选择所有 `<p>` 元素|
-
-层次选择器
-|选择器|例子|描述|
-|-|-|-|
-|element.class| p.intro| 选择 class="intro" 的所有 `<p>` 元素|
-|element,element| div, p| 选择所有 `<div>` 元素和所有 `<p>` 元素|
-|element element| div p |选择 `<div>` 元素内的所有 `<p>` 元素|
-|element>element| div > p| 选择父元素是 `<div>` 的所有 `<p>` 元素|
-|element+element| div + p| 选择紧跟 `<div>` 元素的首个 `<p>` 元素|
-|element1~element2| p ~ ul| 选择前面有 `<p>` 元素的每个 `<ul>` 元素|
-
-属性选择器
-|选择器|例子|描述|
-|-|-|-|
-|[attribute] |[target] |选择带有 target 属性的所有元素。|
-|[attribute=value] |[target=_blank] |选择带有 target="\_blank" 属性的所有元素。|
-
-伪类选择器
-|选择器|例子|描述|
-|-|-|-|
-|:active| a:active |选择活动链接。|
-|::after| p::after |在每个 `<p>` 的内容之后插入内容。|
-|::before| p::before |在每个 `<p>` 的内容之前插入内容。|
-|:first-child |p:first-child |选择属于父元素的第一个子元素的每个 `<p>` 元素。|
-|:focus |input:focus |选择获得焦点的 input 元素。|
-|:fullscreen| :fullscreen |选择处于全屏模式的元素。|
-|:hover |a:hover |选择鼠标指针位于其上的链接。|
-|:link| a:link |选择所有未访问过的链接。|
-|:not(selector) |:not(p) |选择非 `<p>` 元素的每个元素。|
-|:nth-child(n)| p:nth-child(2) |选择属于其父元素的第二个子元素的每个 `<p>` 元素。|
-|:visited| a:visited |选择所有已访问的链接。|
-
-### Q： CSS 选择器的权重是什么样的？
-
-| 样式       | 权重      |
-| ---------- | --------- |
-| !important | 权重最大  |
-| 内联样式   | 权重 1000 |
-| 类选择器   | 权重 10   |
-| id 选择器  | 权重 100  |
-| 派生选择器 | 权重 1    |
-
-## 3、常见规则
-
-### Q：position 的值有哪几种，布局方式是什么样的？
-
-| 值       | 描述                                                                                                                                                                                                     |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| static   | 元素框正常生成。块级元素生成一个矩形框，作为文档流的一部分，行内元素则会创建一个或多个行框，置于其父元素中。                                                                                             |
-| relative | 相对于其正常位置进行定位，元素仍保持其未定位前的形状，它原本所占的空间仍保留。                                                                                                                           |
-| absolute | 元素框从文档流完全删除，相对于值不为 static 的第一个父元素进行定位。元素原先在正常文档流中所占的空间会关闭，就好像元素原来不存在一样。元素定位后生成一个块级框，而不论原来它在正常流中生成何种类型的框。 |
-| fixed    | 元素框的表现类似于将 position 设置为 absolute，不过其包含块是视窗本身。                                                                                                                                  |
-
-### Q： 简单描述下 flex 布局？
-
-使用 flex 布局的元素会成为容器（flex container），它内部的元素自动成为 flex 项目（flex item）。
-容器拥有两根隐形的轴，水平的主轴（main axis），和竖直的交叉轴。
-此外，需注意使用 flex 容器内元素，即 flex item 的 float，clear、vertical-align 属性将失效。
-
-![盒模型](http://www.shadowingszy.top/images/flex.png)
+![盒模型](http://www.shadowingszy.top/images//www.shadowingszy.top/images/flex.png)
 
 flex 的各种属性：
 

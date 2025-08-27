@@ -1,4 +1,4 @@
-
+﻿
 
 # 过拟合欠拟合面试题
 
@@ -20,13 +20,13 @@
 
   下图为**偏差和方差示意图**。
 
-![image-20210927150625116](/images/过拟合与欠拟合/image-20210927150625116.png)
+![image-20210927150625116](/images/image-20210927150625116.png)
 
 ​                                                                                               
 
 **泛化误差、偏差、方差和模型复杂度的关系**（图片来源百面机器学习）
 
-<img src="/images/过拟合与欠拟合/JrBui5yzA3IGgk7.png" alt="image-20210423092851506"  />
+<img src="/images/JrBui5yzA3IGgk7.png" alt="image-20210423092851506"  />
 
 参考资料：https://blog.csdn.net/simple_the_best/article/details/71167786
 
@@ -34,7 +34,7 @@
 
 过拟合指的是在训练数据集上表现良好，而在未知数据上表现差。如图所示：
 
-![img](/images/过拟合与欠拟合/247f6539-1c10-75ac-84f8-02d238699dfd.jpg)
+![img](/images/247f6539-1c10-75ac-84f8-02d238699dfd.jpg)
 
 欠拟合指的是模型没有很好地学习到数据特征，不能够很好地拟合数据，在训练数据和未知数据上表现都很差。
 
@@ -92,11 +92,11 @@
 
 
 
-![img](/images/过拟合与欠拟合/v2-a026e24156e13a1d14c43df26b9bd2a4_720w.jpg)
+![img](/images/v2-a026e24156e13a1d14c43df26b9bd2a4_720w.jpg)
 
-![img](/images/过拟合与欠拟合/v2-f6edae58134c5a26687c3883af48d5d5_720w.jpg)
+![img](/images/v2-f6edae58134c5a26687c3883af48d5d5_720w.jpg)
 
-![img](/images/过拟合与欠拟合/v2-3aaa69f70754c469bca5c8e4c3e161db_720w.jpg)
+![img](/images/v2-3aaa69f70754c469bca5c8e4c3e161db_720w.jpg)
 
 参考链接： https://www.zhihu.com/question/37096933/answer/475278057
 
@@ -156,7 +156,7 @@ $$
 
 
 
-![img](/images/过拟合与欠拟合/96b02ee9-c6ab-718f-b358-0a8db26f9cd7.jpg)
+![img](/images/96b02ee9-c6ab-718f-b358-0a8db26f9cd7.jpg)
 
 
 
@@ -164,7 +164,7 @@ $$
 
 
 
-![img](/images/过拟合与欠拟合/f4a1eb7a-3ce3-7cea-84a0-d569423b2d01.jpg)
+![img](/images/f4a1eb7a-3ce3-7cea-84a0-d569423b2d01.jpg)
 
 
 
