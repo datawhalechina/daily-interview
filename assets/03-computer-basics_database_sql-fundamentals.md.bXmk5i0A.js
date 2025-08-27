@@ -1,0 +1,15 @@
+import{_ as e,c as t,o as l,ag as r}from"./chunks/framework.DT5BmYxR.js";const _=JSON.parse('{"title":"数据库","description":"","frontmatter":{},"headers":[],"relativePath":"03-computer-basics/database/sql-fundamentals.md","filePath":"03-computer-basics/database/sql-fundamentals.md"}'),o={name:"03-computer-basics/database/sql-fundamentals.md"};function n(i,a,s,d,c,h){return l(),t("div",null,[...a[0]||(a[0]=[r(`<h1 id="数据库" tabindex="-1">数据库 <a class="header-anchor" href="#数据库" aria-label="Permalink to &quot;数据库&quot;">​</a></h1><h2 id="_1-事务四大特性" tabindex="-1">1. 事务四大特性 <a class="header-anchor" href="#_1-事务四大特性" aria-label="Permalink to &quot;1. 事务四大特性&quot;">​</a></h2><pre><code>1. 原子性，要么执行，要么不执行
+2. 隔离性，所有操作全部执行完以前其它会话不能看到过程
+3. 一致性，事务前后，数据总额一致
+4. 持久性，一旦事务提交，对数据的改变就是永久的
+</code></pre><h2 id="_2-数据库模型编辑" tabindex="-1">2. 数据库模型编辑 <a class="header-anchor" href="#_2-数据库模型编辑" aria-label="Permalink to &quot;2. 数据库模型编辑&quot;">​</a></h2><pre><code>1. 对象模型
+2. 层次模型（轻量级数据访问协议）
+3. 网状模型（大型数据储存）
+4. 关系模型
+5. 面向对象模型
+6. 半结构化模型
+7. 平面模型（表格模型，一般在形式上是一个二维数组。如表格模型数据Excel)
+</code></pre><h2 id="_3-数据库三范式" tabindex="-1">3. 数据库三范式 <a class="header-anchor" href="#_3-数据库三范式" aria-label="Permalink to &quot;3. 数据库三范式&quot;">​</a></h2><pre><code>第一范式：列不可再分 
+第二范式：行可以唯一区分，主键约束 
+第三范式：表的非主属性不能依赖与其他表的非主属性 外键约束 且三大范式是一级一级依赖的，第二范式建立在第一范式上，第三范式建立第一第二范式上
+</code></pre><h2 id="_4-关系型数据库和非关系型数据库" tabindex="-1">4. 关系型数据库和非关系型数据库 <a class="header-anchor" href="#_4-关系型数据库和非关系型数据库" aria-label="Permalink to &quot;4. 关系型数据库和非关系型数据库&quot;">​</a></h2><ul><li><p><strong>关系数据库</strong>，是建立在关系模型基础上的数据库，借助于集合代数等数学概念和方法来处理数据库中的数据。数据库事务必须具备ACID特性，ACID分别是Atomic原子性，Consistency一致性，Isolation隔离性，Durability持久性。代表数据库：Oracle、Mysql、DB2等。</p></li><li><p><strong>关系型数据库的优点</strong></p></li></ul><ol><li>容易理解：二维表结构表示逻辑世界的相对的概念，直观明了</li><li>使用方便：使用SQl语句查询想要的一切</li><li>易于维护：遵循数据库的设计原则，降低数据的冗余性</li></ol><ul><li><p><strong>非关系型数据库</strong>，又被称为NoSQL（Not Only SQL)，意为不仅仅是SQL，主要是指非关系型、分布式、不提供ACID (数据库事务处理的四个基本要素)的数据库设计模式。对NoSQL 最普遍的定义是“非关联型的”，强调Key-Value 存储和文档数据库的优点。代表数据库：MongoDB、Redis等</p></li><li><p><strong>非关系型数据库的有点</strong></p></li></ul><ol><li>将所有数据看做key-value对，根据key值得到想要的一切数据</li><li>适用于SNS(Social Networking Services)中，例如facebook，微博。系统的升级，功能的增加，往往意味着数据结构巨大变动，key值不变，在value中加入需要的字段，一般value的格式是json或者文本等。</li></ol><p><strong>待续...</strong></p><h1 id="参考" tabindex="-1">参考 <a class="header-anchor" href="#参考" aria-label="Permalink to &quot;参考&quot;">​</a></h1><ol><li><a href="https://blog.csdn.net/qq_22222499/article/details/79060495#8BB_54" target="_blank" rel="noreferrer">https://blog.csdn.net/qq_22222499/article/details/79060495#8BB_54</a></li><li><a href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%BA%93/103728?fr=aladdin" target="_blank" rel="noreferrer">https://baike.baidu.com/item/数据库/103728?fr=aladdin</a></li><li><a href="https://www.2cto.com/database/201710/688377.html" target="_blank" rel="noreferrer">https://www.2cto.com/database/201710/688377.html</a></li></ol>`,15)])])}const u=e(o,[["render",n]]);export{_ as __pageData,u as default};
