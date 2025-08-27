@@ -123,3 +123,28 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+# VitePress 相关文件
+docs/.vitepress/cache
+.vitepress/cache
+
+# Node.js 依赖
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 运行时数据
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+docs-old/
