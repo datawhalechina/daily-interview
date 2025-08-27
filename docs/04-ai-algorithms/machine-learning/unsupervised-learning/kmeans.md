@@ -1,4 +1,4 @@
-
+﻿
 
 
 
@@ -8,7 +8,7 @@ Author:Yvette  明明就;Email:yvette.tsai22@gmail.com
 
 ## 1. 聚类算法（clustering Algorithms）介绍
 
-聚类是一种无监督学习—对大量未知标注的数据集，按数据的内在相似性将数据集划分为多个类别，使类别内的数据相似度较大而类别间的数据相似度较小。
+聚类是一种无监督学习对大量未知标注的数据集，按数据的内在相似性将数据集划分为多个类别，使类别内的数据相似度较大而类别间的数据相似度较小。
 
 聚类算法可以分为原型聚类（k均值算法（K-means）、学习向量量化、（Learning Vector Quantization -LVQ）、高斯混合聚类（Mixture-of-Gaussian），密度聚类（DBSCAN），层次聚类（AGNES）等。
 
@@ -98,7 +98,7 @@ $$
 | sum of squares between clusters(SSB) | $\sum_{i=1}^{K}{n_i \parallel c_i-\bar{x} \parallel ^2}$ |簇心与簇内均值差异的加权和|越大越好|
 |Calinski-Harabasz                     | $\frac{\frac{SSB}{K-1}}{\frac{SSW}{N-K}}$                       |簇间距离和簇内距离之比（除数是惩罚项，因为SSW下降地比较快）|越大越好 |
 |Ball&Hall                             |$\frac{SSW}{K}$                                           | 几乎同SSW|越小越好|
-|Dunn’s index                          | $\frac{\min_{i=1}^M{\min_{j=i+1}^M{d(c_i, c_j)}}}{\max_{k=1}^M{diam(c_k)}}$ <br/>$where d(c_i, c_j)=\min_{x \in c_i, x' \in c_j}{\parallel x-x' \parallel}^2 and$ <br/> $diam(c_k)=\max_{x, x' \in c_k}{\parallel x-x' \parallel}^2$ |本质上也是簇间距离和簇内距离之比|越大越好|
+|Dunns index                          | $\frac{\min_{i=1}^M{\min_{j=i+1}^M{d(c_i, c_j)}}}{\max_{k=1}^M{diam(c_k)}}$ <br/>$where d(c_i, c_j)=\min_{x \in c_i, x' \in c_j}{\parallel x-x' \parallel}^2 and$ <br/> $diam(c_k)=\max_{x, x' \in c_k}{\parallel x-x' \parallel}^2$ |本质上也是簇间距离和簇内距离之比|越大越好|
 
 
 另一个常见的方法是画图，将不同簇的数据点用不同颜色表示。这么做的好处是最直观，缺点是无法处理高维的数据，它最多能展示三维的数据集。
