@@ -118,12 +118,6 @@
 
 感谢所有为这个项目做出贡献的朋友们！
 
-<div align="center">
-
-[![Contributors](https://contrib.rocks/image?repo=datawhalechina/daily-interview)](https://github.com/datawhalechina/daily-interview/graphs/contributors)
-
-</div>
-
 ### 🏆 特别贡献者
 
 - **[@muxiaoxiong](https://github.com/muxiaoxiong)** - 项目负责人，主要维护者
