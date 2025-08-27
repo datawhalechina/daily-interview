@@ -3,6 +3,8 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
     title: 'Daily Interview - 面试必看',
     description: '每一个面试者面试之前必看一遍的小面经',
+    base: '/daily-interview/',
+    ignoreDeadLinks: true,
 
     themeConfig: {
         // 导航栏

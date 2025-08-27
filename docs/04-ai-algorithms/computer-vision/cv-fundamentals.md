@@ -1,4 +1,4 @@
-# CV基础知识
+﻿# CV基础知识
 ## 1. 为什么需要做特征归一化、标准化？  
   - 使不同量纲的特征处于同一数值量级，减少方差大的特征的影响，使模型更准确。  
   - 加快学习算法的收敛速度。  
@@ -13,11 +13,11 @@
   经过处理后符合标准正态分布，即均值为0，标准差为1
  - 非线性归一化
   使用非线性函数log、指数、正切等，如y = 1-e^(-x)，在x∈[0, 6]变化较明显， 用在数据分化比较大的场景  
-  ![20210126230537122.png](./images/20210126230537122.png)
+  ![20210126230537122.png](/images/20210126230537122.png)
 
 ## 3. 介绍一下空洞卷积的原理和作用  
  空洞卷积(Atrous Convolution)也叫做膨胀卷积、扩张卷积，最初的提出是为了解决图像分割在用下采样（池化、卷积）增加感受野时带来的特征图缩小，后再上采样回去时造成的精度上的损失。空洞卷积通过引入了一个扩张率的超参数，该参数定义了卷积核处理数据时各值的间距。  
-![v2-a08645e392a6a5cb49e271e5310f0dd8_1440w.png](./images/v2-a08645e392a6a5cb49e271e5310f0dd8_1440w.png)  
+![v2-a08645e392a6a5cb49e271e5310f0dd8_1440w.png](/images/v2-a08645e392a6a5cb49e271e5310f0dd8_1440w.png)  
 可以在增加感受野的同时保持特征图的尺寸不变,从而代替下采样和上采样，通过调整扩张率得到不同的感受野不大小：  
 a. 是普通的卷积过程(dilation rate = 1),卷积后的感受野为3  
 b. 是dilation rate = 2的空洞卷积,卷积后的感受野为5  
@@ -91,14 +91,14 @@ b. 采用stride为2的卷积层，下采样的过程是一个信息损失的过�
 
 ## 14. 深度可分离卷积的概念和作用  
 深度可分离卷积将传统的卷积分两步进行，分别是depthwise和pointwise。首先按照通道进行计算按位相乘的计算，深度可分离卷积中的卷积核都是单通道的，输出不能改变feature map的通道数，此时通道数不变；然后依然得到将第一步的结果，使用1*1的卷积核进行传统的卷积运算，此时通道数可以进行改变。  
- ![20200314215428236.png](./images/20200314215428236.png)  
+ ![20200314215428236.png](/images/20200314215428236.png)  
  计算量的前后对比：  
 Kh × Kw × Cin × Cout × H × W  
 变成了 Kh × Kw × Cin × H × W + 1 × 1 × Cin × Cout × H × W
 
 ## 15. 神经网络中Addition / Concatenate区别是什么？  
 Addition和Concatenate分支操作统称为shortcut，Addition是在ResNet中提出，两个相同维度的feature map相同位置点的值直接相加，得到新的相同维度feature map，这个操作可以融合之前的特征，增加信息的表达，Concatenate操作是在Inception中首次使用，被DenseNet发扬光大，和addition不同的是，它只要求两个feature map的HW相同，通道数可以不同，然后两个feature map在通道上直接拼接，得到一个更大的feature map，它保留了一些原始的特征，增加了特征的数量，使得有效的信息流继续向后传递。
-![3e1f4862466b01fdfb642f6c1d6da19b.png](./images/3e1f4862466b01fdfb642f6c1d6da19b.png)  
+![3e1f4862466b01fdfb642f6c1d6da19b.png](/images/3e1f4862466b01fdfb642f6c1d6da19b.png)  
 **参考资料**：[The difference and connection between contact and add operation (feature fusion)](https://www.programmersought.com/article/48464790207/)
 
 ## 16. 激活函数是什么？你知道哪些常用的激活函数？  
@@ -200,9 +200,9 @@ tensorflow 图结构的创建是静态的，即图首先被"编译"，然后在�
 
 池化层没有可以训练的参数，因此在卷积神经网络的训练中，池化层只需要将误差传递到上一层，并不需要做梯度的计算。要追求一个原则，那就是梯度之和不变。  
 - average pooling: 前向传播是取某特征区域的平均值进行输出，这个区域的每一个神经元都是有参与前向传播了的，因此，在反向传播时，框架需要将梯度平均分配给每一个神经元再进行反向传播; 
-![KocaU1zbxnXYsyJ.jpg](./images/KocaU1zbxnXYsyJ.jpg)  
+![KocaU1zbxnXYsyJ.jpg](/images/KocaU1zbxnXYsyJ.jpg)  
 - max pooling: 前向传播是取某特征区域的最大值进行输出，这个区域仅有最大值神经元参与了前向传播，因此，在反向传播时，框架仅需要将该区域的梯度直接分配到最大值神经元即可，其他神经元的梯度被分配为0且是被舍弃不参与反向传播的，但如何确认最大值神经元，这个还得框架在进行前向传播时记录下最大值神经元的Max ID位置。
-![CZnUSwEcFy84JVL.jpg](./images/CZnUSwEcFy84JVL.jpg)  
+![CZnUSwEcFy84JVL.jpg](/images/CZnUSwEcFy84JVL.jpg)  
 
 
 **参考资料**：[池化层（pooling）的反向传播是怎么实现的](https://blog.csdn.net/Jason_yyz/article/details/80003271)
@@ -233,7 +233,7 @@ CNN的卷积运算并非数学定义的卷积，CNN中的运算是不需要翻�
 **参考资料**：[深度学习 优缺点](https://www.cnblogs.com/emanlee/p/12404147.html)
 
 ## 41. Softmax+Cross Entropy如何反向求导？
-![ce.png](./images/ce.png)  
+![ce.png](/images/ce.png)  
 
 ## 42. 有什么数据增强的方式？  
 - 单样本几何变换：翻转，旋转，裁剪，缩放  

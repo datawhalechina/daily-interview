@@ -1,4 +1,4 @@
-# 1 模型介绍
+﻿# 1 模型介绍
 
 ## 1.1 模型概述
 
@@ -9,7 +9,7 @@ Word2Vec是Google在2013年提出的一个NLP工具，它通过一个浅层的�
 
 Word2Vec模型的灵感来源于Bengio在2003年提出的NNLM模型（Nerual Network Language Model），该模型使用一个三层前馈神经网络$f(w_k,w_{k-1},w_{k-2},...,w_{k-n+1};\theta)$来拟合一个词序列的条件概率$P(w_k|w_{k-1},w_{k-2},...,w_1)$。第一层是映射层，通过一个共享矩阵，将One-Hot向量转化为词向量，第二层是一个激活函数为tanh的隐含层，第三层是Softmax输出层，将向量映射到$[0,1]$概率空间中。根据条件概率公式与大数定律，使用词频$\frac{\text{Count}(w_k,w_{k-1},w_{k-2},...,w_{k-n+1})}{\text{Count}(w_{k-1},w_{k-2},...,w_{k-n+1})}$来近似地估计真实的条件概率。
 
-<img src="Word2Vec详解.assets/NNLM.png" alt="NNLM" style="zoom: 50%;" />
+<img src="/images/NNLM.png" alt="NNLM" style="zoom: 50%;" />
 
 Bengio发现，我们可以使用映射层的权值作为词向量表征。但是，由于参数空间非常庞大，NNLM模型的训练速度非常慢，在百万级的数据集上需要耗时数周才能得到相对不错的结果，而在千万级甚至更大的数据集上，几乎无法得到结果。
 
@@ -25,7 +25,7 @@ Mikolov发现，NNLM模型可以被拆分成两个步骤：
 - NNLM在进行Sigmoid归一化时需要遍历整个词汇表，Word2Vec模型提出了Hierarchical Softmax与Negative Sampling两种策略进行优化。
 - 依据分布式假设（上下文环境相似的两个词有着相近的语义），将下文单词也纳入训练环境，并提出了两种训练策略，一种是用上下文预测中心词，称为CBOW，另一种是用中心词预测上下文，称为Skip-Gram。
 
-<img src="Word2Vec详解.assets/Word2Vec.png" alt="Word2Vec" style="zoom:40%;" />
+<img src="/images/Word2Vec.png" alt="Word2Vec" style="zoom:40%;" />
 
 ## 1.2 CBOW模型
 

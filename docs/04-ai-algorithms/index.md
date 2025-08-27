@@ -13,7 +13,7 @@
 - [Prophet](machine-learning/fundamentals/Prophet.md)
 
 #### [监督学习](machine-learning/supervised-learning/)
-- [线性回�?逻辑回归](machine-learning/supervised-learning/linear-logistic-regression.md)
+- [线性回归/逻辑回归](machine-learning/supervised-learning/linear-logistic-regression.md)
 - [DecisionTree](machine-learning/supervised-learning/DecisionTree.md)
 - [SVM](machine-learning/supervised-learning/SVM.md)
 - [NaiveBayes](machine-learning/supervised-learning/NaiveBayes.md)
@@ -35,11 +35,11 @@
 - [metrics](machine-learning/model-evaluation/metrics.md)
 - [ABTest](machine-learning/model-evaluation/ABTest.md)
 
-### 👁�?[计算机视觉](computer-vision/)
+### 👁️ [计算机视觉](computer-vision/)
 - [CV基础](computer-vision/cv-fundamentals.md)
 - [目标检测](computer-vision/object-detection.md)
 
-### 🗣�?[自然语言处理](nlp/)
+### 🗣️ [自然语言处理](nlp/)
 - [文本表征方式](nlp/text-representation.md)
 - [基于深度学习的模型](nlp/deep-learning-models.md)
 
