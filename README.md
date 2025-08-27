@@ -155,7 +155,7 @@
 ### 🔗 相关链接
 
 [![GitHub](https://img.shields.io/badge/GitHub-datawhalechina-black?style=for-the-badge&logo=github)](https://github.com/datawhalechina)
-[![Website](https://img.shields.io/badge/Website-datawhale.club-blue?style=for-the-badge&logo=internet-explorer)](https://datawhale.cn)
+[![Website](https://img.shields.io/badge/Website-datawhale.cn-blue?style=for-the-badge&logo=internet-explorer)](https://datawhale.cn)
 
 </div>
 
