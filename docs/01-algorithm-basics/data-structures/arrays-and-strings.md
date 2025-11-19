@@ -8,7 +8,7 @@
 > 公司：各大公司
 
 ```cpp
-基础解法（返回一对下标）
+//基础解法（返回一对下标）
 pair<int, int> twosum(int *arr, int n, int target) {
     map<int, int> hash;
     pair<int, int> result;
@@ -22,7 +22,7 @@ pair<int, int> twosum(int *arr, int n, int target) {
     }
     return result;
 }
-进阶解法（返回所有下标对）
+//进阶解法（返回所有下标对）
 vector<pair<int, int> > twosumplus(int *arr, int n, int target) {
     map<int, vector<int> > hash;
     for(int i = 0; i < n; i ++) {
@@ -87,7 +87,7 @@ int find(vector<int> &arr, int l, int r, int target) {
 > 公司：百度，京东
 
 ```cpp
-基础解法（出现次数超过一半）
+//基础解法（出现次数超过一半）
 int MainElem(int *arr, int n) {
     int mainelem = arr[0];
     int cnt = 1;
@@ -104,7 +104,7 @@ int MainElem(int *arr, int n) {
     }
     return mainelem;
 }
-扩展解法（出现次数超过 1/3）
+//扩展解法（出现次数超过 1/3）
 int MainElemP(int *arr, int n) {
     int maina, mainb, cnta, cntb;
     cnta = cntb = 0;
@@ -140,7 +140,7 @@ int MainElemP(int *arr, int n) {
 > 公司：常见题目
 
 ```cpp
-基础解法（出现一次的数）
+//基础解法（出现一次的数）
 int SingleNumber(int *arr, int n) {
     int ans = 0;
     for(int i = 0; i < n; i ++) {
@@ -148,7 +148,7 @@ int SingleNumber(int *arr, int n) {
     }
     return ans;
 }
-扩展1解法（两个出现一次的数）
+//扩展1解法（两个出现一次的数）
 pair<int, int> SingleNumberP(int *arr, int n) {
     int c = 0;
     for(int i = 0; i < n; i ++) {
@@ -170,7 +170,7 @@ pair<int, int> SingleNumberP(int *arr, int n) {
     }
     return make_pair(a, b);
 }
-扩展2解法（出现一次的数，其他出现三次）
+//扩展2解法（出现一次的数，其他出现三次）
 int SingleNumberPP(int *arr, int n) {
     int res = 0;
     for(int j = 0; j < 32; j ++) {
@@ -227,7 +227,7 @@ double findMedianSortedArrays(vector<int> &A, vector<int> &B) {
 > 公司：常见题目
 
 ```cpp
-基础解法（判断是否存在）
+//基础解法（判断是否存在）
 bool SearchMatrix(vector<vector<int> > matrix, int target) {
     if(matrix.size() == 0) return false;
     int m = matrix.size(), n = matrix[0].size();
@@ -246,7 +246,7 @@ bool SearchMatrix(vector<vector<int> > matrix, int target) {
     }
     return false;
 }
-扩展解法（计算出现次数）
+//扩展解法（计算出现次数）
 int SearchMatrixP(vector<vector<int> > matrix, int target) {
     if(matrix.size() == 0) return 0;
     int m = matrix.size(), n = matrix[0].size();
