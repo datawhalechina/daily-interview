@@ -3,14 +3,14 @@
 ## 一、目标检测背景知识
 
 目标检测任务是找出图像或视频中人们感兴趣的物体，并同时检测出它们的位置和大小(Bouding box)。不同于图像分类任务，目标检测不仅要解决分类问题，还要解决定位问题，是属于Multi-Task的问题。
-<img src="images/检测分类分割.jpg" alt="检测分类分割" />
+<img src="/images/检测分类分割.jpg" alt="检测分类分割" />
 
 目标检测的发展脉络可以划分为两个周期：
 
 - 传统目标检测算法时期(1998年-2014年)
 - 基于深度学习的目标检测算法时期(2014年-至今)
 
-<img src="images/目标检测模型年限图.png" alt="目标检测模型年限" style="zoom: 50%;" />
+<img src="/images/目标检测模型年限图.png" alt="目标检测模型年限" style="zoom: 50%;" />
 
 
 ### 传统目标检测算法
@@ -40,7 +40,7 @@
 2. Neck进行高低层特征的传递与融合，此外还起到重要的“分而治之”作用。
 3. Head进行最终的预测。
 
-<img src="images/目标检测模型示意图(YOLOv4).png" alt="目标检测模型示意图(YOLOv4)" style="zoom:50%;" />
+<img src="/images/目标检测模型示意图(YOLOv4).png" alt="目标检测模型示意图(YOLOv4)" style="zoom:50%;" />
 
 
 ## 二、Questions
@@ -78,7 +78,7 @@ Faster R-CNN是一种两阶段（two-stage）方法,它提出的RPN网络取代�
 
 #### （3）faster R-CNN是经典的two-stage 检测器，请简单说明其中two-stage的含义。
    faster R-CNN之所以叫做 two-stage 检测器，原因是其包括一个区域提取网络 **RPN** 和 一个RoI Refine 网络 **R-CNN**(检测网络)，同时为了将 RPN 提取的不同大小的 RoI 特征图组成 batch 输入到后面的 R-CNN 中，在两者中间还插入了一个 RoI Pooling 层，可以保证任意大小特征图输入都可以变成指定大小输出。即在RPN提取ROI区域后，送入检测网络再进行分类和回归。
-   ![faster-rcnn结构图示意图](images/faster-rcnn结构图示意图.jpg)
+   ![faster-rcnn结构图示意图](/images/faster-rcnn结构图示意图.jpg)
 
 #### （4）请简要说明一下RPN（Region Proposal Network）网络的作用、实现细节<上交苏研院-二面（2020）、旷视-交叉面（2019）>
   - **RPN网络的作用：**
@@ -90,7 +90,7 @@ Faster R-CNN是一种两阶段（two-stage）方法,它提出的RPN网络取代�
      - 4个坐标，即每个结果都有4个坐标，这里是指对**原图**的坐标偏移，一定要记住是原图；
 
      - 9个anchor，faster R-CNN预先设定好的anchor共有9种组合，所以k等于9，最后我们的结果是针对这9种组合的，所以特征图上有H x W x 9个结果，每个特征点共有18个分数和36个坐标。
-![RPN网络示意图](images/RPN网络示意图.png)
+![RPN网络示意图](/images/RPN网络示意图.png)
 
 
 - **RPN的损失函数**(多任务损失:二分类损失+SmoothL1损失)
@@ -98,7 +98,7 @@ Faster R-CNN是一种两阶段（two-stage）方法,它提出的RPN网络取代�
 以下两种情况我们视锚点为了一个正样本标签时：
     1. 锚点和锚点们与标注之间的最高重叠矩形区域
     2. 或者锚点和标注的重叠区域指标（IOU）>0.7
-![RPN_loss](images/RPN_loss.png)
+![RPN_loss](/images/RPN_loss.png)
 
 $$
 L({p_i},{t_i}) = \frac{1}{N_{cls}}\sum_{i}L_{cls}(p_i,p^*_i) + \lambda\frac{1}{N_{reg}}\sum_{i}p^*_iL_{reg}(t_i,t^*_i)
@@ -200,7 +200,7 @@ $$
 - **RoI Align中双线性插值计算像素值的具体方法**
 
   在数学上，双线性插值是有两个变量的插值函数的线性插值扩展，其核心思想是在两个方向分别进行一次线性插值。
-<div align=center><img src =images/双线性插值.png#pic_center/></div>
+<div align=center><img src =/images/双线性插值.png#pic_center/></div>
 
 假如我们想得到未知函数 $f$ 在点 $P = (x, y)$ 的值，假设我们已知函数$ f$ 在 $Q_{11} = (x_1, y_1)$、$Q_{12} = (x_1, y_2)$, $Q_{21} = (x_2, y_1)$ 以及$ Q_{22} = (x_2, y_2)$ 四个点的值。最常见的情况，f就是一个像素点的像素值。首先在 x 方向进行线性插值，得到
 $$
@@ -450,7 +450,7 @@ Cascade R-CNN 主要针对 Faster R-CNN 中 R-CNN 部分 IoU 阈值选取对最�
 
 #### （6）简要介绍一下FPN<百度实习-一面（2019）、字节跳动-二面（2019）、云从科技-二面(2019)>
 
-<img src="images\FPN.png" style="zoom:75%;" />
+<img src="/images\FPN.png" style="zoom:75%;" />
 
 FPN网络直接在Faster R-CNN单网络上做修改，每个分辨率的 feature map 引入后一分辨率缩放两倍的 feature map 做 element-wise 相加的操作。通过这样的连接，每一层预测所用的 feature map 都融合了不同分辨率、不同语义强度的特征，融合的不同分辨率的 feature map 分别做对应分辨率大小的物体检测。这样保证了每一层都有合适的分辨率以及强语义（rich semantic）特征。同时，由于此方法只是在原网络基础上加上了额外的跨层连接，在实际应用中几乎不增加额外的时间和计算量。
 
@@ -596,7 +596,7 @@ $$
 
 #### （1）手撕IOU<华为-一面（2020）、作业帮-一面（2019）、腾讯-一面(2018)>
 
-<img src="images\IOU.png" style="zoom:60%;" />
+<img src="/images\IOU.png" style="zoom:60%;" />
 
 计算IOU非常简单，有两种方法：
 
