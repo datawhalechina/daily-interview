@@ -22,7 +22,7 @@ SVM，Support Vector Machine，它是一种二分类模型，其基本模型定�
  - SVM基本思想：间隔最大化，不仅要讲正负类样本分开，而且对最难分的点（离超平面最近的点）也要有足够大的确信度将他们分开。
 
 
-![在这里插入图片描述](img/SVM/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1NTQ3Mjgx,size_16,color_FFFFFF,t_70.png)![在这里插入图片描述](img/SVM/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1NTQ3Mjgx,size_16,color_FFFFFF,t_70-20211031095607863-5645369.png)
+![在这里插入图片描述](/images/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1NTQ3Mjgx,size_16,color_FFFFFF,t_70.png)![在这里插入图片描述](/images/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1NTQ3Mjgx,size_16,color_FFFFFF,t_70-20211031095607863-5645369.png)
 
 **函数间隔**
 
@@ -147,7 +147,7 @@ $b^{*}=y_{j}-\sum_{i=1}^{N} \alpha_{i}^{*} y_{i}\left\langle x_{i}, x_{j}\right\
 **核技巧**
 
 基本思想：找一个映射Φ（一般为高维映射），将样本点特征x映射到新的特征空间Φ(x)，使其在新的特征空间中线性可分（或近似线性可分），然后利用之前的SVM算法在新的特征空间中对样本进行分类。
-![在这里插入图片描述](img/SVM/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1NTQ3Mjgx,size_16,color_FFFFFF,t_70-20211031095618159.png)
+![在这里插入图片描述](/images/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1NTQ3Mjgx,size_16,color_FFFFFF,t_70-20211031095618159.png)
 流程：
 输入训练集$T=\left\{\left(x_{1}, y_{1}\right),\left(x_{2}, y_{2}\right), \ldots,\left(x_{n}, y_{n}\right)\right\}$其中$x_{i} \in R^{n}, y_{i} \in\{-1,+1\}$
 （1）选择合适的映射函数Φ，将训练集??映射为

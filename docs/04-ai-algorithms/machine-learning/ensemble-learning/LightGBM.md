@@ -1,4 +1,4 @@
-﻿![](img/LightGBM/LightGBM.PNG)
+﻿![LightGBM](/images/LightGBM.png)
 
 
 # LightGBM面试题
