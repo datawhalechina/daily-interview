@@ -1,10 +1,10 @@
-﻿# 二叉树(Binary Tree)
-> 二叉树是面试中最容易被问道的问题，这里同样给出高频而且有代表性的10道题目。
-> 二叉树介绍：
-> 1. [百度百科:二叉树](https://baike.baidu.com/item/%E4%BA%8C%E5%8F%89%E6%A0%91)
-> 2. [wikipedia: binary Tree](https://en.wikipedia.org/wiki/Binary_tree)
+﻿# 二叉树(bibary Tree)
+> 二叉树是面试中最容易被问道的问题，这里同样给出高频而且有代表性的10道题目。         
+> 二叉树介绍: 
+> 1. <a href="https://baike.baidu.com/item/%E4%BA%8C%E5%8F%89%E6%A0%91">百度百科:二叉树</a>
+> 2. <a href="https://en.wikipedia.org/wiki/Binary_tree">wikipedia: binary Tree</a>
 
-定义二叉树：
+定义二叉树:
 ```cpp
 struct TreeNode {
     int data;
@@ -15,39 +15,39 @@ struct TreeNode {
 ```
 ## 1. 二叉树的遍历
 > **题目**: 给出二叉树的层次遍历, 前序, 中序, 后序 遍历.    
-> **扩展**: 前序遍历的迭代形式，希望大家自行手写中序和后序的迭代代码, 很多公司会问道非递归代码.
+> **扩展**: 前序遍历的迭代形式,希望大家自行手写中序和后序的迭代代码, 很多公司会问道非递归代码.
 ```cpp
 // 前序遍历: 根 -> 左 -> 右 [感谢wbzhang233(https://github.com/wbzhang233)同学提出问题]
 void printPostorder(struct TreeNode* node) { 
     if (node == NULL) 
         return;   
     // 根
-    cout << node->data << " ";
+    cout << node->data << "";
     // 左
-    printPostorder(node->left);
+    printPostorder(node->left); 
     // 右
-    printPostorder(node->right);
+    printPostorder(node->right);   
 } 
-// 中序遍历: ?-> ?-> ? 
+// 中序遍历: 左 -> 根 -> 右  
 void printInorder(struct TreeNode* node) { 
     if (node == NULL) 
         return; 
-    // ?
+    // 左
     printInorder(node->left);   
-    // ?
+    // 根
     cout << node->data << " ";   
-    // ?
+    // 右
     printInorder(node->right); 
 } 
-// 后序遍历: ?-> ?-> ?[感谢wbzhang233(https://github.com/wbzhang233)同学提出问题]
+// 后序遍历: 左 -> 右 -> 根 [感谢wbzhang233(https://github.com/wbzhang233)同学提出问题]
 void printPreorder(struct TreeNode* node) { 
     if (node == NULL) 
         return; 
-    // ?
+    // 左
     printPreorder(node->left);  
-    // ?
+    // 右
     printPreorder(node->right);
-    // ?
+    // 根
     cout << node->data << " ";
 }  
 
@@ -56,7 +56,7 @@ void printLevelOrder(struct TreeNode* node) {
     queue<TreeNode *> q;
     if(!node) q.push(node);
     while(!q.empty()) {
-        // 当前的长度是上一层的个数,这一点很重要,可以解决很多层次遍历相关的问?
+        // 当前的长度是上一层的个数,这一点很重要,可以解决很多层次遍历相关的问题
         int len = q.size(); 
         for(int i = 0; i < len; i ++) {
             TreeNode * tmp = q.top();
@@ -68,7 +68,7 @@ void printLevelOrder(struct TreeNode* node) {
     } 
 }
 
-// 迭代的前序遍? root left right
+// 迭代的前序遍历, root left right
 void iterativePreorder(struct TreeNode *root) {
     if(root == NULL) return;
     stack<TreeNode *> sta;
@@ -83,9 +83,9 @@ void iterativePreorder(struct TreeNode *root) {
     }
 }
 ```
-## 2. 二叉树的Z型遍?
-> **题目**: 二叉树的Z型遍?    
-> **扩展**: 层次遍历的从下到上遍? 层次遍历的奇数层遍历, 层次遍历的从右到左遍历等,都可以使用这个代码进行变?
+## 2. 二叉树的Z型遍历
+> **题目**: 二叉树的Z型遍历.    
+> **扩展**: 层次遍历的从下到上遍历, 层次遍历的奇数层遍历, 层次遍历的从右到左遍历等,都可以使用这个代码进行变形
 ```cpp
 /***
     3
@@ -93,7 +93,7 @@ void iterativePreorder(struct TreeNode *root) {
   9  20
     /  \
    15   7
-Z型遍? 3, 20, 9, 15, 7
+Z型遍历: 3, 20, 9, 15, 7
 **/
 vector<int> printLevelOrder(struct TreeNode* node) {
     queue<TreeNode *> q;
@@ -102,7 +102,7 @@ vector<int> printLevelOrder(struct TreeNode* node) {
     if(!node) q.push(node);
     int k = 1;
     while(!q.empty()) {
-        // 当前的长度是上一层的个数,这一点很重要,可以解决很多层次遍历相关的问?
+        // 当前的长度是上一层的个数,这一点很重要,可以解决很多层次遍历相关的问题
         int len = q.size(); 
         for(int i = 0; i < len; i ++) {
             TreeNode * tmp = q.top();
@@ -127,13 +127,13 @@ vector<int> printLevelOrder(struct TreeNode* node) {
     return ans;
 }
 ```
-## 3. 平衡二叉?
+## 3. 平衡二叉树
 > **题目**: 给出一个二叉树,判断是否是平衡二叉树.    
-> 一棵高度平衡的二叉树的定义是：一棵二叉树中每个节点的两个子树的深度相差不会超??    
-> **扩展**: 二叉树的最大高? 也是使用类似的递归思想, 二叉树的最大宽度是使用层次遍历,
+> 一棵高度平衡的二叉树的定义是：一棵二叉树中每个节点的两个子树的深度相差不会超过1。     
+> **扩展**: 二叉树的最大高度, 也是使用类似的递归思想, 二叉树的最大宽度是使用层次遍历,
 
-```
-// 二叉树的最大高?
+```cpp
+// 二叉树的最大高度
 int getHeight(TreeNode *root) {
     if(root == NULL) return 0;    
     return max(getHeight(root->left),getHeight(root->right))+1;        
@@ -146,10 +146,10 @@ bool isBalanced(TreeNode *root) {
     return isBalanced(root->left) && isBalanced(root->right);   
 }
 ```
-## 4. 前序遍历的第k个结?
-> **题目**: 给个二叉? 找到其前序遍历的第k个结?  
-> **扩展**: 中旬的遍历的第k个结? 前序遍历的结点a的前一个结??
-```
+## 4. 前序遍历的第k个结点
+> **题目**: 给个二叉树, 找到其前序遍历的第k个结点.  
+> **扩展**: 中旬的遍历的第k个结点, 前序遍历的结点a的前一个结点 等
+```cpp
 TreeNode* KthPostordernode(struct Node* root, int k) { 
     static int flag = 0; 
     if (root == NULL) 
@@ -162,20 +162,20 @@ TreeNode* KthPostordernode(struct Node* root, int k) {
     }
 } 
 ```
-## 5. 二叉树的对角线遍?
+## 5. 二叉树的对角线遍历
 > 题目: 根据对角线顺序遍历二叉树.   
-> 扩展: 根据垂线从左到右遍历二叉?     
+> 扩展: 根据垂线从左到右遍历二叉树.     
 
 > 输入:     
 > <img src="/images/d1-1.png"/>
-```
+```cpp
 输出: 
  8 10 14
  3 6 7 13
  1 4
 ```
-> 我们从右上向左下看进行层次划?可以看出, root和root->right都是同一? root->left是下一? 我们可以使用map,将层数作为key, 每一层对应的节点作为vector<TreeNode *>作为values, 最后打印出来map中的值即?
-```
+> 我们从右上向左下看进行层次划分,可以看出, root和root->right都是同一层, root->left是下一层, 我们可以使用map,将层数作为key, 每一层对应的节点作为vector<TreeNode *>作为values, 最后打印出来map中的值即可.
+```cpp
 void diagOrderUtil(Node* root, int d, map<int, vector<int>> &diagVec) { 
     if (!root) 
         return; 
@@ -196,12 +196,12 @@ void diagOrder(Node* root) {
 } 
 ```
 ## 6. 构造二叉树
-**题目**: 给出二叉树的前序和中序遍?构造二叉树.    
-**扩展**: 其他几种构造二叉树的方?建议多熟练掌?     
+**题目**: 给出二叉树的前序和中序遍历,构造二叉树.    
+**扩展**: 其他几种构造二叉树的方式,建议多熟练掌握.     
 中旬: [1,2,3]   
 前序: [2,1,3]   
 return {2,1,3}.     
-知道一?前序的第一个A是根节点, 在中序中找到前序的第一个节点A,就可以将中序分成左右两个子树,只有进行递归即可,
+知道一点,前序的第一个A是根节点, 在中序中找到前序的第一个节点A,就可以将中序分成左右两个子树,只有进行递归即可,
 
 ```cpp
 class Solution {
@@ -228,7 +228,7 @@ public:
 };
 
 ```
-## 7. 对称二叉?
+## 7. 对称二叉树
 > **题目**: 判断给定的二叉树是否是对称二叉树.   
 > **扩展**: 二叉树的镜像
 ```
@@ -244,11 +244,11 @@ public:
   2   2
    \   \
    3    3
-不是对称? False
+不是对称的, False
 ```
 
 ```cpp
-// 比较两个二叉树是否互为镜?
+// 比较两个二叉树是否互为镜像
 bool isMirror(struct Node *root1, struct Node *root2) { 
     if (root1 == NULL && root2 == NULL) 
         return true;   
@@ -258,20 +258,20 @@ bool isMirror(struct Node *root1, struct Node *root2) {
     return false; 
 } 
 
-// 是不是自身互为镜?就是对称的二叉树  
+// 是不是自身互为镜像,就是对称的二叉树  
 bool isSymmetric(struct Node* root) 
 { 
     return isMirror(root, root); 
 } 
 ```
-## 8. 最近公共祖?
-> **题目**: 给定两个节点a和b,找出a和b的最近公共祖?    
-> 最近公共祖先有很多方法,这里给出最好理解一个方? 分别找到a?
-> b所有祖? 进行比较. 这里我们需要找到从root到A的路?和从root到B的路? 进行比较即可.     
-> **扩展**: 两个节点a和b的最近距?       
-> a和b之间的距? 我们可以先从a--root, root--b, 主要这个时?多走了很多无用路? 其实可以 a--lca(a,b)--b,这是最短路? a--lca(a,b)--b = a--root--b - 2*lca(a,b)
+## 8. 最近公共祖先
+> **题目**: 给定两个节点a和b,找出a和b的最近公共祖先.    
+> 最近公共祖先有很多方法,这里给出最好理解一个方法, 分别找到a和
+> b所有祖先, 进行比较. 这里我们需要找到从root到A的路径,和从root到B的路径, 进行比较即可.     
+> **扩展**: 两个节点a和b的最近距离.       
+> a和b之间的距离, 我们可以先从a--root, root--b, 主要这个时候,多走了很多无用路径, 其实可以 a--lca(a,b)--b,这是最短路径, a--lca(a,b)--b = a--root--b - 2*lca(a,b)
 
-```
+```cpp
 bool findPath(Node *root, vector<int> &path, int k) { 
     if (root == NULL) return false;   
     path.push_back(root->key);   
@@ -295,12 +295,12 @@ int findLCA(Node *root, int a, int b) {
     return -1;
 } 
 ```
-## 9. 寻找树中最左下结点的?
-> **题目**: 给定一棵二叉树，找到这棵树最中最后一行中最左边的?     
-> **扩展**: 最右边的?     
-> **解释**: 使用深度优先搜索dfs，当我们第一次访问一个深度为depth的节点x（之前只访问过深度小于depth的节点）时，x一定是depth深度的最左节点，用这个节点更新Ans。即我们维护一个最大深度，当遍历到一个点的深度大于最大深度时，用这个节点来更新答案，并更新最大深度即可。时间复杂度O(n)?
+## 9. 寻找树中最左下结点的值
+> **题目**: 给定一棵二叉树，找到这棵树最中最后一行中最左边的值.     
+> **扩展**: 最右边的值.     
+> **解释**: 使用深度优先搜索dfs，当我们第一次访问一个深度为depth的节点x（之前只访问过深度小于depth的节点）时，x一定是depth深度的最左节点，用这个节点更新Ans。即我们维护一个最大深度，当遍历到一个点的深度大于最大深度时，用这个节点来更新答案，并更新最大深度即可。时间复杂度O(n)。
 
-```
+```cpp
 int findBottomLeftValue(TreeNode * root) {
     int ans_data = 0, ans_depth = 0;
     return findBottomLeftValue(root, 1, ans_data, ans_depth);
@@ -316,8 +316,8 @@ int findBottomLeftValue(TreeNode * root, int depth, int &ans_data, int &ans_dept
 }
 ```
 ## 10. 二叉树的最长连续子序列
-> **题目**: 给一棵二叉树，找到最长连续路径的长度?
-这条路径是指 任何的节点序列中的起始节点到树中的任一节点都必须遵?**??* 联系。最长的连续路径必须是从父亲节点到孩子节点（不能逆序）?
+> **题目**: 给一棵二叉树，找到最长连续路径的长度。
+这条路径是指 任何的节点序列中的起始节点到树中的任一节点都必须遵循 **父-子** 联系。最长的连续路径必须是从父亲节点到孩子节点（不能逆序）。
 ```
 样例1:
 
@@ -325,7 +325,7 @@ int findBottomLeftValue(TreeNode * root, int depth, int &ans_data, int &ans_dept
 {1,#,3,2,4,#,#,#,5}
 输出:3
 说明:
-这棵树如图所?
+这棵树如图所示
    1
     \
      3
@@ -333,7 +333,7 @@ int findBottomLeftValue(TreeNode * root, int depth, int &ans_data, int &ans_dept
    2   4
         \
          5
-最长连续序列是3-4-5，所以返?.
+最长连续序列是3-4-5，所以返回3.
 样例2:
 
 输入:
@@ -348,10 +348,10 @@ int findBottomLeftValue(TreeNode * root, int depth, int &ans_data, int &ans_dept
    2    
   / 
  1
-最长连续序列是2-3，而不?-2-1，所以返?.
+最长连续序列是2-3，而不是3-2-1，所以返回2.
 ```
 
-```
+```cpp
 void longestConsecutiveUtil(Node* root, int curLength, int expected, int& res) { 
     if (root == NULL) 
         return;   
@@ -367,11 +367,11 @@ void longestConsecutiveUtil(Node* root, int curLength, int expected, int& res) {
 } 
 ```
 
-**扩展**: 给定一棵二叉树，找到最长连续序列路径的长度(节点??
-路径起点跟终点可以为二叉树的任意节点?
+**扩展**: 给定一棵二叉树，找到最长连续序列路径的长度(节点数)。
+路径起点跟终点可以为二叉树的任意节点。
 
-```
-?:
+```cpp
+例1:
 
 输入:
 {1,2,0,3}
@@ -384,7 +384,7 @@ void longestConsecutiveUtil(Node* root, int curLength, int expected, int& res) {
  /
 3
 0-1-2-3
-?:
+例2:
 
 输入:
 {3,2,2}
@@ -398,7 +398,7 @@ void longestConsecutiveUtil(Node* root, int curLength, int expected, int& res) {
 
 ```
 
-```
+```cpp
 class Solution {
 public:
     int longestConsecutive2(TreeNode * root) {
@@ -425,7 +425,7 @@ public:
 
 ```
 ## 11. 左边看到的二叉树结点
-> 题目: 给你一个二叉树,打印出来从左边视角看到的所有结?
+> 题目: 给你一个二叉树,打印出来从左边视角看到的所有结点.
 
 ```
 Input 1: 
@@ -449,10 +449,10 @@ Input 2:
 Output 2: 1 2 4 5 6
 ```
 > 解析:         
-> 方法一: 用我们上面提到的层次遍历, 打印出来每一层的第一个结点即?     
-> 方法? 维护一个从左到右的最大等? 如果当前等级大于最大等?则是左边看到?否则不是.     
-> 这里只给出第二种方法的代?       
-```
+> 方法一: 用我们上面提到的层次遍历, 打印出来每一层的第一个结点即可.     
+> 方法二: 维护一个从左到右的最大等级, 如果当前等级大于最大等级,则是左边看到的,否则不是.     
+> 这里只给出第二种方法的代码.       
+```cpp
 // leftView(root, 1, 0, ans)
 void leftView(struct node *root, int level, int &max_level, vector<int> &ans) { 
     if (root==NULL)  return;   
@@ -465,7 +465,7 @@ void leftView(struct node *root, int level, int &max_level, vector<int> &ans) {
 } 
 ```
 
-## 参?
+## 参考
 1. http://www.cnblogs.com/grandyang/p/6864398.html
 2. https://www.jiuzhang.com/solution/
 3. https://www.geeksforgeeks.org/binary-tree-data-structure/

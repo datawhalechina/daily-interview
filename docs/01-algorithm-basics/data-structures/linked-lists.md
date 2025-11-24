@@ -1,7 +1,7 @@
 ﻿# linklist
 链表也是面试中常问道的题目，链表定义简单很容易考察面试者的水平，比如在数组中很简单的题目转换成链表就有很大的变动。例如链表的插入和归并排序、查找倒数第k个节点等.
 
-## 1.回文链表(234)
+## 1.回文链表（234）
 
 请判断一个链表是否为回文链表
 
@@ -26,7 +26,7 @@ class Solution(object):
 
 ## 2.求单链表的中间节点
 快、慢指针实现
-```
+```python
 def find_middle_node(head):
     slow, fast = head, head
     fast = fast.next if fast else None
@@ -38,7 +38,7 @@ def find_middle_node(head):
 
 ## 3.删除无序链表中的重复项
 给定一个无序的链表，去掉其重复项，并保留原顺序，例如链表1->3->1->5->5->7，去掉重复项后为1->3->5->7
-```
+```python
 class ListNode:
     def __init__(self, x):
         self.val = x
@@ -66,7 +66,7 @@ class Solution:
 
 输入: 1->2->3->3->4->4->5
 输出: 1->2->5
-```
+```python
 class ListNode:
     def __init__(self, x):
         self.val = x
@@ -123,13 +123,13 @@ class Solution:
             return new_head.next 
 ```
 
-## 5.环形链表?41?
+## 5.环形链表（141）
 ~~~
-给定一个链表，判断链表中是否有? 并找到第一个相交的?
+给定一个链表，判断链表中是否有环, 并找到第一个相交的点
 思路：设置两个指针slow和fast，一个步长为1，一个步长为2进行遍历。如果有环，则slow和fast总会在某一点相遇。如果没有环，则fast会先为空，或者fast.next为空
 ~~~
 
-```
+```python
 class Solution(object):
     def hasCycle(self, head, firstMeetNode):
         fast = slow = head
@@ -146,7 +146,7 @@ class Solution(object):
         return False
 ```
 
-## 6.反转链表?06?
+## 6.反转链表（206）
 
 (循环算法，递归算法)  微软
 
@@ -155,7 +155,7 @@ class Solution(object):
 输出: 5->4->3->2->1->NULL
 ~~~
 
-```
+```python
 class ListNode(object):
     def __init__(self, x):
         self.val = x
@@ -195,7 +195,7 @@ class Solution2(object):
 
 ## 7.在双向链表中删除指定元素（微软）
 
-```
+```python
 class Node(object):
     '''双向节点'''
     def __init__(self, item):
@@ -216,29 +216,29 @@ class DLinkedlist(object):
             if cur.item == item:
 # 如果首节点的元素即是要删除的元素
                 if cur.next == None:
-# 如果链表只有这一个节?
+# 如果链表只有这一个节点
                     self._head = None
                 else:
 # 将第二个节点的prev设置为None
                     cur.next.prev = None
-# 将_head指向第二个节?
+# 将_head指向第二个节点
                     self._head = cur.next
                 return
             
             while cur != None:
                 if cur.item == item:
-# 将cur的前一个节点的next指向cur的后一个节?
+# 将cur的前一个节点的next指向cur的后一个节点
                     cur.prev.next = cur.next
-# 将cur的后一个节点的prev指向cur的前一个节?
+# 将cur的后一个节点的prev指向cur的前一个节点
                     cur.next.prev = cur.prev
                     break
                 cur = cur.next
                 
 ```
 
-## 8.两个链表合并为一个升序链表（微软?
+## 8.两个链表合并为一个升序链表（微软）
 
-```
+```python
 class Node(object):
     def __init__(self,item,next_=None):
         self.item = item
@@ -262,16 +262,16 @@ class Solution(object):
             cur.next = l2
         return head.next    
 ```
-## 9. 倒数第k个节?
-> 题目: 找到链表的倒数第k个节?
-> 解析: 使用两个指针fast和slow,fast先走k?之后fast和slow一起走,
-> 直到fast到达最后一个节?slow就是倒数第k个节?
+## 9. 倒数第k个节点
+> 题目: 找到链表的倒数第k个节点
+> 解析: 使用两个指针fast和slow,fast先走k步,之后fast和slow一起走,
+> 直到fast到达最后一个节点,slow就是倒数第k个节点
 
-```
+```python
 class Solution(object):
     '''
-    题意：删除链表中倒数第k个结点，尽量只扫描一遍?
-    使用两个指针扫描，当第一个指针扫描到第k个结点后?
+    题意：删除链表中倒数第k个结点，尽量只扫描一遍。
+    使用两个指针扫描，当第一个指针扫描到第k个结点后，
     第二个指针从表头与第一个指针同时向后移动，
     当第一个指针指向空节点时，另一个指针就指向倒数第k个结点了       
     '''
@@ -289,10 +289,10 @@ class Solution(object):
 
 ```
 
-## 10. 等概率返回链表中的一个元?
-> 题意: 给你一个单链表,每次等概率随机返回一个元?
-> 分析: 这里先不做详细解?这是一个随机化算法的一?
-```
+## 10. 等概率返回链表中的一个元素
+> 题意: 给你一个单链表,每次等概率随机返回一个元素
+> 分析: 这里先不做详细解释,这是一个随机化算法的一种
+```python
 class Solution(object):
     def randNode(self, head):
         res = head

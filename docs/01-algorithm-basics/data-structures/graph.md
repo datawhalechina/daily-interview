@@ -8,6 +8,10 @@
 
 + 邻接矩阵表示的无向图
 
+<img src="/images/g-1.png">
+
++ 邻接表表示的无向图
+
 <img src="/images/g-2.png">
 
 

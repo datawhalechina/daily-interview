@@ -4,7 +4,7 @@
 需要提出，这篇文章并不介绍排序，什么插入、冒泡、希尔等算法，我们都不会介绍，我们的目的是给出最常见的关于排序的面试题目，俗称押题，当然希望每个人都能研究每一个题目，在面试过程中遇到排序问题，都可以解决。
 
 ## 1. 快速排序
-> 题目: 这是面试中最常见的问题，手写快排，面试官主要是考查候选人的算法基本工。
+> 题目: 这是面试中最常见的问题，手写快排，面试官主要是考查候选人的算法基本功。
 > 公司: 爱奇艺，某金融公司
 
 ```cpp
@@ -48,7 +48,7 @@ void QuickSort(T list[], int start,int end, bool (*cmp)(T, T)=cmp) {
 ## 2. 堆排序
 > 题目: 手写堆排序
 > 公司: 阿里
-```
+```cpp
 // 第一步建立最大堆， 下标从1开始 A[1..n]
 void BuildMaxHeap(int *A, int n, int &heapsize){
     heapsize=n; //全局变量，表示最大堆的大小
@@ -90,7 +90,7 @@ void MaxheapFY(int *A, int i){
 ## 3. 归并排序
 > 题目: 手写归并排序
 
-```
+```cpp
 template<class T>
 void Merge(T list[], int start, int mid, int end, bool (*cmp)(T, T)=cmp) {
     T *temp = new T[end-start+1];
@@ -128,7 +128,7 @@ void MergeSortUtil(T list[], int start,int end, bool (*cmp)(T, T)=cmp) {
 > 题目: 实现常用的多路归并排序(使用最大堆，或者优先队列)
 > 公司: 百度，360
 
-```
+```cpp
 // vec中每一个vector都是有序的
 vector<int> MultMerge(vector<vector<int> > vec, vector<int> &result) {
 	int n = vec.size();
@@ -168,7 +168,7 @@ vector<int> MultMerge(vector<vector<int> > vec, vector<int> &result) {
 > 题目: 单链表的插入排序（升序）。
 > 公司: 百度
 
-```
+```cpp
 struct Node {
     int data;
     struct Node * next;
@@ -213,7 +213,7 @@ void InsertSort(Node** head) {
 > 题目: 单链表的归并排序。
 > 公司: 百度
 
-```
+```cpp
 void MergeSort(Node **head_ref) {
     Node *head  = *head_ref;
     Node *left;
