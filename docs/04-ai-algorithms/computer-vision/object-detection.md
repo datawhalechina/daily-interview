@@ -3,14 +3,14 @@
 ## 一、目标检测背景知识
 
 目标检测任务是找出图像或视频中人们感兴趣的物体，并同时检测出它们的位置和大小(Bouding box)。不同于图像分类任务，目标检测不仅要解决分类问题，还要解决定位问题，是属于Multi-Task的问题。
-<img src="/images/检测分类分割.jpg" alt="检测分类分割" />
+<img src="images/检测分类分割.jpg" alt="检测分类分割" />
 
 目标检测的发展脉络可以划分为两个周期：
 
 - 传统目标检测算法时期(1998年-2014年)
 - 基于深度学习的目标检测算法时期(2014年-至今)
 
-<img src="/images/目标检测模型年限图.png" alt="目标检测模型年限" style="zoom: 50%;" />
+<img src="images/目标检测模型年限图.png" alt="目标检测模型年限" style="zoom: 50%;" />
 
 
 ### 传统目标检测算法
@@ -40,7 +40,7 @@
 2. Neck进行高低层特征的传递与融合，此外还起到重要的“分而治之”作用。
 3. Head进行最终的预测。
 
-<img src="/images/目标检测模型示意图(YOLOv4).png" alt="目标检测模型示意图(YOLOv4)" style="zoom:50%;" />
+<img src="images/目标检测模型示意图(YOLOv4).png" alt="目标检测模型示意图(YOLOv4)" style="zoom:50%;" />
 
 
 ## 二、Questions
@@ -78,14 +78,27 @@ Faster R-CNN是一种两阶段（two-stage）方法,它提出的RPN网络取代�
 
 #### （3）faster R-CNN是经典的two-stage 检测器，请简单说明其中two-stage的含义。
    faster R-CNN之所以叫做 two-stage 检测器，原因是其包括一个区域提取网络 **RPN** 和 一个RoI Refine 网络 **R-CNN**(检测网络)，同时为了将 RPN 提取的不同大小的 RoI 特征图组成 batch 输入到后面的 R-CNN 中，在两者中间还插入了一个 RoI Pooling 层，可以保证任意大小特征图输入都可以变成指定大小输出。即在RPN提取ROI区域后，送入检测网络再进行分类和回归。
-   ![faster-rcnn结构图示意图](/images/RPN网络示意图.png)
+   ![faster-rcnn结构图示意图](images/faster-rcnn结构图示意图.jpg)
+
+#### （4）请简要说明一下RPN（Region Proposal Network）网络的作用、实现细节<上交苏研院-二面（2020）、旷视-交叉面（2019）>
+  - **RPN网络的作用：**
+     -  RPN专门用来提取候选框，一方面RPN耗时少，另一方面RPN可以很容易结合到Fast RCNN中，成为一个整体。
+     **RPN网络的实现细节：**
+      - 1个特征图（Faster RCNN的公共Feature Map）经过sliding window处理，得到256维特征，对每个特征向量做两次全连接操作，一个得到2个分数，一个得到4个坐标{然后通过两次全连接得到结果2k个分数和4k个坐标[k指的是由锚点产生的K个框(K anchor boxes)]}
+
+     - 2个分数，即每个结果都有2个分数，因为RPN是提候选框，还不用判断类别，所以只要求区分是不是物体就行，那么就有两个分数，前景（物体）的分数，和背景的分数； 
+     - 4个坐标，即每个结果都有4个坐标，这里是指对**原图**的坐标偏移，一定要记住是原图；
+
+     - 9个anchor，faster R-CNN预先设定好的anchor共有9种组合，所以k等于9，最后我们的结果是针对这9种组合的，所以特征图上有H x W x 9个结果，每个特征点共有18个分数和36个坐标。
+![RPN网络示意图](images/RPN网络示意图.png)
+
 
 - **RPN的损失函数**(多任务损失:二分类损失+SmoothL1损失)
 训练RPN网络时，对于每个锚点(anchor)我们定义了一个二分类标签（是该物体或不是）。
 以下两种情况我们视锚点为了一个正样本标签时：
     1. 锚点和锚点们与标注之间的最高重叠矩形区域
     2. 或者锚点和标注的重叠区域指标（IOU）>0.7
-![RPN_loss](/images/RPN_loss.png)
+![RPN_loss](images/RPN_loss.png)
 
 $$
 L({p_i},{t_i}) = \frac{1}{N_{cls}}\sum_{i}L_{cls}(p_i,p^*_i) + \lambda\frac{1}{N_{reg}}\sum_{i}p^*_iL_{reg}(t_i,t^*_i)
@@ -187,8 +200,7 @@ $$
 - **RoI Align中双线性插值计算像素值的具体方法**
 
   在数学上，双线性插值是有两个变量的插值函数的线性插值扩展，其核心思想是在两个方向分别进行一次线性插值。
-
-![双线性插值](/images/双线性插值.png)
+<div align=center><img src =images/双线性插值.png#pic_center/></div>
 
 假如我们想得到未知函数 $f$ 在点 $P = (x, y)$ 的值，假设我们已知函数$ f$ 在 $Q_{11} = (x_1, y_1)$、$Q_{12} = (x_1, y_2)$, $Q_{21} = (x_2, y_1)$ 以及$ Q_{22} = (x_2, y_2)$ 四个点的值。最常见的情况，f就是一个像素点的像素值。首先在 x 方向进行线性插值，得到
 $$
@@ -438,8 +450,153 @@ Cascade R-CNN 主要针对 Faster R-CNN 中 R-CNN 部分 IoU 阈值选取对最�
 
 #### （6）简要介绍一下FPN<百度实习-一面（2019）、字节跳动-二面（2019）、云从科技-二面(2019)>
 
-![FPN](/images/IOU.png" style="zoom:60%;" />
+<img src="images\FPN.png" style="zoom:75%;" />
 
+FPN网络直接在Faster R-CNN单网络上做修改，每个分辨率的 feature map 引入后一分辨率缩放两倍的 feature map 做 element-wise 相加的操作。通过这样的连接，每一层预测所用的 feature map 都融合了不同分辨率、不同语义强度的特征，融合的不同分辨率的 feature map 分别做对应分辨率大小的物体检测。这样保证了每一层都有合适的分辨率以及强语义（rich semantic）特征。同时，由于此方法只是在原网络基础上加上了额外的跨层连接，在实际应用中几乎不增加额外的时间和计算量。
+
+#### （7）FPN的特征融合为什么是相加操作呢？
+
+假设两路输入来说，如果是通道数相同且后面带卷积的话，add等价于concat之后对应通道共享同一个卷积核。FPN里的金字塔，是希望把分辨率最小但语义最强的特征图增加分辨率，从性质上是可以用add的。如果用concat，因为分辨率小的特征通道数更多，计算量是一笔不小的开销。所以FPN里特征融合使用相加操作可以理解为是为了降低计算量。
+
+#### （8）阐述一下FPN为什么能提升小目标的准确率?
+
+低层的特征语义信息比较少，但是目标位置准确；高层的特征语义信息比较丰富，但是目标位置比较粗略。原来多数的object detection算法都是只采用顶层特征做预测。FPN同时利用低层特征高分辨率和高层特征的高语义信息，通过融合这些不同特征层的特征达到预测的效果。并且预测是在每个融合后的特征层上单独进行的。所以可以提升小目标的准确率。
+
+#### （9）基于FPN的RPN是怎么训练的？
+  在FPN的每个预测层上都接一个RPN子网，确定RPN子网的正负anchor box样本，再计算各预测层上RPN的anchor box分类和回归损失，利用BP将梯度回传更新权值
+
+
+### 4、综合
+
+#### （1）阐述一下ssd和retinanet的区别
+
+SSD的基础网络是VGG，且SSD在使用多层feature map时只是简单的在不同层的feature map上放default box，并没有真正将低维度特征和高维度特征进行融合。且SSD网络中使用的控制正负样本数量比的方法是难样本挖掘方法，loss是分类+回归的loss。而RetinaNet网络的基础网络是resnet+FPN，是真正将低维度的特征和高维度的特征进行了特征融合后再来做检测的。且控制正负样本的方法是使用Focal Loss。
+
+#### （2）faster rcnn和yolo，ssd之间的区别和联系<上交苏研院-二面（2020）、云从科技-二面（2020）、旷视-一面（2018）、阿里实习-一面（2018）>
+1. 针对之前RCNN系列selective search的方法导致算法没有实时性，所以faster rcnn提出RPN网络来取代之前的方法，可以理解为fasterrcnn=fast rcnn+rpn网络，且rpn网络和fast rcnn的分类，回归网络共用特征提取层，这样使得引入RPN网络不会增加太多计算量。整体流程为先使用RPN网络找出可能存在object的区域，再将这些区域送入fast rcnn中进一步定位和分类。所以faster rcnn是典型的Two stage算法。因为faster rcnn中包含了两次定位，所以其精度一般高于YOLO和SSD算法，所以速度一般慢于YOLO和SSD。
+
+2. YOLO算法的特点是将检测问题转换成回归问题，即YOLO直接通过回归一次既产生坐标，又产生每种类别的概率。YOLO中将每张图分成7*7的网格，每个网格默认可能属于2个object，即在一张图片上提取98个region proposal，相比于faster rcnn使用Anchor机制提取20k个anchor再从中提取最终的300个region proposal，所以faster rcnn的精度比YOLO要高，但是由于需要处理更多region proposal，所以faster rcnn的速度要比YOLO慢。
+
+3. SSD相比于faster rcnn使用了多层网络特征，而不仅仅使用最后一层feature map。SSD还借鉴了YOLO算法中将检测任务转换为回归任务的思想，且SSD也借鉴了faster rcnn中的anchor机制，只是SSD的anchor不是每个位置的精调，而是类似于YOLO那样在feature map上分割出网格，在网格上产生anchor。但是SSD和YOLO不需要selective search步骤，所以SSD和YOLO同属于One-Stage算法。
+
+
+
+#### （3）分析一下SSD,YOLO,Faster rcnn等常用检测网络对小目标检测效果不好的原因
+**SSD，YOLO**等单阶段多尺度算法，小目标检测需要较高的分辨率，SSD对于高分辨的低层特征没有再利用，而这些层对于检测小目标很重要。按SSD的设计思想，其实SSD对小目标应该有比较好的效果，但是需要重新精细设计SSD中的default box，比如重新设计min_sizes参数，扩大小default box的数量来cover住小目标。但是随着default box数量的增加，网络速度也会降低。YOLO网络可以理解为是强行把图片分割成7*7个网格，每个网格预测2个目标，相当于只有98个anchor，所以不管是小目标，还是大目标，YOLO的表现都不是很理想，但是由于只需处理少量的anchor，所以YOLO的速度上有很大优势。
+
+**Faster rcnn**系列对小目标检测效果不好的原因是faster rcnn只用卷积网络的最后一层，但是卷积网络的最后一层往往feature map太小，导致之后的检测和回归无法满足要求。甚至一些小目标在最后的卷积层上直接没有特征点了。所以导致faster rcnn对小目标检测表现较差。
+
+
+### 5. Loss
+
+#### （1）请列举目标检测中常见的Loss（回归的，分类的）<海康-一面（2020）>
+目标检测中的损失函数通常由两部分组成：classification loss 和 bounding box regression loss。
+- 分类损失：
+  1. 交叉熵损失函数（这里举例：softmax+交叉熵）
+      对于二分类的交叉熵损失函数形式如下：
+$$
+L = -ylog(p)-(1-y)log(1-p) = \{\begin{array}{ll}log(p) & y=1 \\log(1-p) & y=0\end{array}.
+$$
+
+  2. focal loss出于论文Focal Loss for Dense Object Detection，主要是为了解决one-stage目标检测算法中正负样本比例严重失衡的问题，降低了大量简单负样本在训练中所占的比重，可理解为是一种困难样本挖掘。focal loss是在交叉熵损失函数上修改的。具体改进：
+$$
+FL(p, y)=-\alpha y (1-p)^{\gamma}log(p)-(1-\alpha)(1-y)p^{\gamma}log(1-p)
+\\= \{\begin{array}{ll}-\alpha (1-p)^{\gamma}log(p) & y=1 \\-(1-\alpha)p^{\gamma}log(1-p) & y=0\end{array}.
+$$
+  ps: focal loss出来之后，不少loss基于focal loss延伸
+
+
+
+- 回归损失：
+  
+  1. L1（MAE）
+  $$
+    L1 = |x|
+  $$
+
+  2. L2（MSE）
+  $$
+    L2 = x^2
+  $$
+
+  3. smooth L1损失函数（smooth L1损失函数是在Fast R-CNN中提出）
+  $$
+      \text { smooth }_{L_{1}}(x)=\{\begin{array}{ll}0.5 x^{2} & \text { if }|x|<1 \\|x|-0.5 & \text { otherwise }\end{array}.
+  $$
+  4. IoU Loss(iou计算见上)
+   IoU loss是基于预测框和真实框之间的IoU（交并比）的，IoU定义如下：
+  $$
+    L_{iou} = 1 - IoU 
+  $$
+
+  5. GIoU loss
+  GIoU loss在IoU loss的基础上考虑了两个框没有重叠区域时产生的损失。具体定义如下：
+  $$
+    L_{giou} = 1 - IoU + R(P,G) = 1- IoU + \frac {|C - P \cup G|}{|C|}
+  $$
+
+  6. DIoU loss
+     DIoU在IoU loss的基础上考虑了两个框的中心点距离，具体定义如下：
+  $$
+    L_{diou} = 1 - IoU + R(P,G) = 1- IoU + \frac {\rho(p,g)}{c^2}
+  $$
+
+  其中，ρ表示预测框和标注框中心端的距离，p和g是两个框的中心点。c表示两个框的最小包围矩形框的对角线长度。当两个框距离无限远时，中心点距离和外接矩形框对角线长度无限逼近，R→1
+
+  7. CIoU loss
+  DIoU loss考虑了两个框中心点的距离，而CIoU loss在DIoU loss的基础上做了更详细的度量，具体包括：
+     - 重叠面积
+     - 中心点距离
+     - 长宽比
+     - 具体定义如下：
+  $$
+    L_{diou} = 1 - IoU + R(P,G) = 1- IoU + \frac {\rho(p,g)}{c^2} + \alpha v
+    \\ \text{其中:}， v = \frac{4}{\pi^2}(arctan\frac{w^g}{h^g}-arctan\frac{w^p}{h^p})^2 , \alpha = \frac{v}{(1 - Iou)+v}
+  $$
+
+#### （2）focal loss解决什么问题，如何写，每个参数有什么作用?<云从科技-二面（2019）>
+Focal loss主要是为了解决**one-stage**目标检测中**正负样本比例严重失衡**的问题。该损失函数降低了大量简单负样本在训练中所占的权重，也可理解为一种困难样本挖掘
+$$
+FL(p, y)=- y (1-p)^{\gamma}log(p)-(1-y)p^{\gamma}log(1-p)
+\\= \{\begin{array}{ll}- (1-p)^{\gamma}log(p) & y=1 \\-p^{\gamma}log(1-p) & y=0\end{array}
+$$
+添加参数γ，当γ大于0时，对于易分的正样本或负样本，权重小，而对于难区分的样本则权重大，避免让简单样本主导loss，γ越大，困难样本的权重越大
+$$
+FL(p, y)=-\alpha y (1-p)^{\gamma}log(p)-(1-\alpha)(1-y)p^{\gamma}log(1-p)
+\\= \{\begin{array}{ll}-\alpha (1-p)^{\gamma}log(p) & y=1 \\-(1-\alpha)p^{\gamma}log(1-p) & y=0\end{array}
+$$
+添加参数α，用来平衡正负样本本身的比例不均
+
+其中，文中参数是**α=0.25，γ=2**
+
+
+#### （3） 训练过程中loss一致无法收敛，可能的原因<虹软-一面（2019）>
+
+1. **数据和标签**
+数据分类标注是否准确？数据是否干净？数据库太小一般不会带来不收敛的问题，只要你一直在train总会收敛（rp问题跑飞了不算）。反而不收敛一般是由于样本的信息量太大导致网络不足以fit住整个样本空间。样本少只可能带来过拟合的问题
+
+2. **学习率设定不合理**
+在自己训练新网络时，可以从0.1开始尝试，如果loss不下降的意思，那就降低，除以10，用0.01尝试，一般来说0.01会收敛，不行的话就用0.001. 学习率设置过大，很容易震荡。不过刚刚开始不建议把学习率设置过小，尤其是在训练的开始阶段。在开始阶段我们不能把学习率设置的太低否则loss不会收敛。我的做法是逐渐尝试，从0.1,0.08,0.06,0.05 ......逐渐减小直到正常为止，
+
+3. **网络设定不合理**
+如果做很复杂的分类任务，却只用了很浅的网络，可能会导致训练难以收敛，换网络换网络换网络，重要的事情说三遍，或者也可以尝试加深当前网络。
+
+4. **数据集label的设置**
+检查lable是否有错，有的时候图像类别的label设置成1，2，3正确设置应该为0,1,2。
+
+5. **改变图片大小**
+改变图片大小有时可以解决收敛问题
+
+6. **数据归一化**
+神经网络中对数据进行归一化是不可忽略的步骤，网络能不能正常工作，还得看你有没有做归一化，一般来讲，归一化就是减去数据平均值除以标准差，通常是针对每个输入和输出特征进行归一化
+
+
+
+### 6、基础知识
+
+#### （1）手撕IOU<华为-一面（2020）、作业帮-一面（2019）、腾讯-一面(2018)>
+
+<img src="images\IOU.png" style="zoom:60%;" />
 
 计算IOU非常简单，有两种方法：
 

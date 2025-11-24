@@ -1,13 +1,146 @@
-# 开发技�?
-## 📂 分类目录
+# 06-开发技术
+
+开发技术是各类开发岗位的专业技能要求，涵盖前端开发、后端开发、大数据开发等不同技术栈的核心知识。
+
+## 📚 内容导航
 
 ### 🌐 [前端开发](frontend/)
-- [HTML_CSS](frontend/HTML_CSS.md)
-- [CSS进阶](frontend/css-advanced.md)
-- [前端框架](frontend/frontend-frameworks.md)
+现代前端开发技术栈和最佳实践
+
+- [HTML_CSS](frontend/HTML_CSS.md) - HTML5和CSS3的核心特性
+- [CSS进阶](frontend/css-advanced.md) - CSS进阶技巧和布局方案
+- [前端框架](frontend/frontend-frameworks.md) - React、Vue、Angular等主流框架
 
 ### 📊 [大数据](big-data/)
-- [Hadoop生态](big-data/hadoop-ecosystem.md)
-- [mapreduce](big-data/mapreduce.md)
-- [大数据面试题](big-data/big-data-interview.md)
-- [README](big-data/README.md)
+大数据技术栈和分布式计算框架
+
+- [Hadoop生态](big-data/hadoop-ecosystem.md) - Hadoop生态系统技术栈
+- [mapreduce](big-data/mapreduce.md) - MapReduce编程模型
+- [大数据面试题](big-data/big-data-interview.md) - 大数据开发常见面试题
+- [README](big-data/README.md) - 大数据技术框架概述
+
+## 🎯 不同开发岗位技术要求
+
+### 🌐 前端开发工程师
+
+#### 核心技能
+- **HTML/CSS**：语义化HTML、CSS3动画、响应式设计
+- **JavaScript**：ES6+、异步编程、模块化开发
+- **框架应用**：React/Vue/Angular的深度使用
+- **工程化**：Webpack、Vite等构建工具
+
+#### 进阶技能
+- **TypeScript**：类型系统、接口设计
+- **状态管理**：Redux、Vuex、Pinia等
+- **测试**：单元测试、集成测试、E2E测试
+- **性能优化**：首屏优化、懒加载、缓存策略
+
+#### 面试重点
+- JavaScript基础和高级特性
+- 浏览器工作原理
+- 前端性能优化
+- 工程化和模块化
+
+### 💻 后端开发工程师
+
+#### 核心技能
+- **编程语言**：Java、Go、Python、Node.js等
+- **框架应用**：Spring、Django、Express等
+- **数据库**：MySQL、PostgreSQL、Redis等
+- **API设计**：RESTful、GraphQL设计原则
+
+#### 进阶技能
+- **微服务**：服务拆分、服务治理、API网关
+- **消息队列**：Kafka、RabbitMQ等中间件
+- **缓存**：Redis、Memcached的使用和优化
+- **监控**：日志、监控、链路追踪
+
+#### 面试重点
+- 编程语言深度理解
+- 数据库设计和优化
+- 系统架构设计
+- 并发和性能优化
+
+### 📊 大数据开发工程师
+
+#### 核心技能
+- **大数据框架**：Hadoop、Spark、Flink等
+- **数据存储**：HDFS、HBase、Hive等
+- **流处理**：Kafka、Storm、Flink等
+- **编程语言**：Java、Scala、Python等
+
+#### 进阶技能
+- **数据仓库**：维度建模、ETL流程设计
+- **实时计算**：流式处理、实时数据分析
+- **机器学习**：MLlib、TensorFlow等
+- **云平台**：AWS、阿里云等大数据服务
+
+#### 面试重点
+- 大数据技术栈理解
+- 数据处理和分析能力
+- 分布式系统原理
+- 性能调优经验
+
+## 💡 技术发展趋势
+
+### 前端技术趋势
+1. **框架演进**：React 18、Vue 3、Svelte等新特性
+2. **构建工具**：Vite、esbuild等新一代构建工具
+3. **跨端开发**：React Native、Flutter、小程序等
+4. **Web3.0**：WebAssembly、PWA、边缘计算
+
+### 后端技术趋势
+1. **云原生**：Kubernetes、Docker、Serverless
+2. **微服务**：Service Mesh、API Gateway
+3. **数据库**：NewSQL、图数据库、时序数据库
+4. **编程语言**：Rust、Go的快速发展
+
+### 大数据技术趋势
+1. **实时化**：流批一体、实时数据湖
+2. **云化**：云原生大数据、Serverless计算
+3. **AI融合**：MLOps、AutoML、特征工程
+4. **数据治理**：数据血缘、数据质量、隐私保护
+
+## 🔍 面试准备策略
+
+### 技术深度
+1. **核心技术**：深入理解主要技术的原理和实现
+2. **最佳实践**：了解行业最佳实践和设计模式
+3. **性能优化**：具备性能分析和优化能力
+4. **故障排查**：有实际的问题诊断和解决经验
+
+### 项目经验
+1. **完整项目**：有端到端的项目开发经验
+2. **技术难点**：能够深入讲解技术难点和解决方案
+3. **团队协作**：有良好的团队协作和沟通能力
+4. **持续学习**：保持对新技术的学习和实践
+
+### 面试技巧
+1. **项目介绍**：准备2-3个深度参与的项目
+2. **技术选型**：能够解释技术选择的原因
+3. **架构设计**：具备系统设计和架构思维
+4. **代码实现**：能够现场编写高质量代码
+
+## 📖 学习资源推荐
+
+### 前端学习资源
+- **MDN Web Docs**：权威的Web技术文档
+- **React官方文档**：React生态学习
+- **Vue官方文档**：Vue生态学习
+- **前端工程化实践**：构建工具和工程化
+
+### 后端学习资源
+- **Spring官方文档**：Java后端开发
+- **Go官方文档**：Go语言学习
+- **微服务实战**：微服务架构设计
+- **高性能网站建设**：性能优化实践
+
+### 大数据学习资源
+- **Apache官方文档**：Hadoop、Spark等
+- **大数据技术原理与应用**：理论基础
+- **实时计算系统设计**：流处理技术
+- **数据仓库工具箱**：数据仓库设计
+
+---
+
+> 💡 **提示**：开发技术更新迅速，要保持持续学习的心态，关注技术发展趋势，结合实际项目进行深度实践。

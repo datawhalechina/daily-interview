@@ -1,52 +1,105 @@
-# AI算法
+# 04-AI算法
 
-## 📂 分类目录
+AI算法是当前最热门的技术领域，涵盖机器学习、深度学习、计算机视觉、自然语言处理等多个方向。本部分专为AI算法工程师岗位面试准备。
 
-### 🤖 [机器学习](machine-learning/)
+## 📚 内容导航
 
-#### [基础理论](machine-learning/fundamentals/)
-- [机器学习基础面试题](machine-learning/fundamentals/ml-fundamentals.md)
-- [过拟合与欠拟合](machine-learning/fundamentals/overfitting-underfitting.md)
-- [梯度下降](machine-learning/fundamentals/gradient-descent.md)
-- [HMM](machine-learning/fundamentals/HMM.md)
-- [CRF](machine-learning/fundamentals/CRF.md)
-- [Prophet](machine-learning/fundamentals/Prophet.md)
+### 🤖 [机器学习](机器学习/)
+机器学习是AI的核心基础，包含完整的理论体系和实践算法。
 
-#### [监督学习](machine-learning/supervised-learning/)
-- [线性回归/逻辑回归](machine-learning/supervised-learning/linear-logistic-regression.md)
-- [DecisionTree](machine-learning/supervised-learning/DecisionTree.md)
-- [SVM](machine-learning/supervised-learning/SVM.md)
-- [NaiveBayes](machine-learning/supervised-learning/NaiveBayes.md)
-- [kNN](machine-learning/supervised-learning/kNN.md)
+#### [基础理论](机器学习/基础理论/)
+- [机器学习基础面试题](机器学习/基础理论/机器学习基础面试题.md) - ML核心概念和理论
+- [过拟合与欠拟合](机器学习/基础理论/过拟合与欠拟合.md) - 模型泛化能力的关键问题
+- [梯度下降](机器学习/基础理论/梯度下降.md) - 优化算法的基础
+- [HMM](机器学习/基础理论/HMM.md) - 隐马尔可夫模型
+- [CRF](机器学习/基础理论/CRF.md) - 条件随机场
+- [Prophet](机器学习/基础理论/Prophet.md) - 时间序列预测
 
-#### [无监督学习](machine-learning/unsupervised-learning/)
-- [kmeans](machine-learning/unsupervised-learning/kmeans.md)
+#### [监督学习](机器学习/监督学习/)
+- [线性回归+逻辑回归](机器学习/监督学习/线性回归+逻辑回归.md) - 最基础的监督学习算法
+- [DecisionTree](机器学习/监督学习/DecisionTree.md) - 决策树算法
+- [SVM](机器学习/监督学习/SVM.md) - 支持向量机
+- [NaiveBayes](机器学习/监督学习/NaiveBayes.md) - 朴素贝叶斯
+- [kNN](机器学习/监督学习/kNN.md) - k近邻算法
 
-#### [集成学习](machine-learning/ensemble-learning/)
-- [EnsembleLearning](machine-learning/ensemble-learning/EnsembleLearning.md)
-- [RandomForest](machine-learning/ensemble-learning/RandomForest.md)
-- [Adaboost](machine-learning/ensemble-learning/Adaboost.md)
-- [XGBoost](machine-learning/ensemble-learning/XGBoost.md)
-- [LightGBM](machine-learning/ensemble-learning/LightGBM.md)
-- [Catboost](machine-learning/ensemble-learning/Catboost.md)
-- [TreeEmbedding](machine-learning/ensemble-learning/TreeEmbedding.md)
+#### [无监督学习](机器学习/无监督学习/)
+- [kmeans](机器学习/无监督学习/kmeans.md) - K均值聚类算法
 
-#### [模型评估](machine-learning/model-evaluation/)
-- [metrics](machine-learning/model-evaluation/metrics.md)
-- [ABTest](machine-learning/model-evaluation/ABTest.md)
+#### [集成学习](机器学习/集成学习/)
+- [EnsembleLearning](机器学习/集成学习/EnsembleLearning.md) - 集成学习基础
+- [RandomForest](机器学习/集成学习/RandomForest.md) - 随机森林
+- [Adaboost](机器学习/集成学习/Adaboost.md) - AdaBoost算法
+- [XGBoost](机器学习/集成学习/XGBoost.md) - 梯度提升优化版本
+- [LightGBM](机器学习/集成学习/LightGBM.md) - 高效梯度提升框架
+- [Catboost](机器学习/集成学习/Catboost.md) - 类别特征处理
+- [TreeEmbedding](机器学习/集成学习/TreeEmbedding.md) - 树嵌入方法
 
-### 👁️ [计算机视觉](computer-vision/)
-- [CV基础](computer-vision/cv-fundamentals.md)
-- [目标检测](computer-vision/object-detection.md)
+#### [模型评估](机器学习/模型评估/)
+- [metrics](机器学习/模型评估/metrics.md) - 模型评估指标
+- [ABTest](机器学习/模型评估/ABTest.md) - A/B测试方法
 
-### 🗣️ [自然语言处理](nlp/)
-- [文本表征方式](nlp/text-representation.md)
-- [基于深度学习的模型](nlp/deep-learning-models.md)
+### 👁️ [计算机视觉](计算机视觉/)
+- [CV基础](计算机视觉/CV基础.md) - 计算机视觉基础知识
+- [目标检测](计算机视觉/目标检测.md) - 目标检测算法
 
-### 📊 [推荐系统](recommendation/)
-- [collaborative_filtering](recommendation/collaborative_filtering.md)
-- [deepfm](recommendation/deepfm.md)
-- [gbdt_lr](recommendation/gbdt_lr.md)
+### 📝 [自然语言处理](自然语言处理/)
+- [文本表征方式](自然语言处理/文本表征方式.md) - 文本表示方法
+- [基于深度学习的模型](自然语言处理/基于深度学习的模型.md) - 深度学习在NLP中的应用
 
-### 🧠 [大语言模型](llm/)
-- [大模型的一些面试题小结](llm/llm-interview-questions.md)
+### 🎯 [推荐系统](推荐系统/)
+- [collaborative_filtering](推荐系统/collaborative_filtering.md) - 协同过滤算法
+- [deepfm](推荐系统/deepfm.md) - DeepFM模型
+- [gbdt_lr](推荐系统/gbdt_lr.md) - GBDT+LR组合模型
+
+### 🧠 [大语言模型](大语言模型/)
+- [大模型的一些面试题小结](大语言模型/大模型的一些面试题小结.md) - LLM面试要点
+
+## 🎯 AI算法岗位面试重点
+
+### 理论基础 (40%)
+1. **机器学习基础**：监督/无监督学习、损失函数、正则化
+2. **数学基础**：线性代数、概率统计、微积分、最优化
+3. **深度学习**：神经网络、反向传播、激活函数
+4. **模型评估**：交叉验证、评估指标、过拟合处理
+
+### 算法实现 (30%)
+1. **经典算法**：能够手写实现主要算法
+2. **框架使用**：熟练使用TensorFlow、PyTorch等
+3. **代码优化**：算法效率优化、内存管理
+4. **调试技巧**：模型调试、参数调优
+
+### 项目经验 (20%)
+1. **端到端项目**：从数据处理到模型部署
+2. **业务理解**：算法在具体业务中的应用
+3. **技术选型**：根据问题选择合适的算法
+4. **效果评估**：模型效果的量化评估
+
+### 前沿技术 (10%)
+1. **最新进展**：关注领域最新研究成果
+2. **技术趋势**：了解技术发展方向
+3. **论文阅读**：能够理解和讨论重要论文
+4. **创新思维**：对技术问题有独特见解
+
+## 💡 学习建议
+
+### 基础阶段
+1. **数学基础**：线性代数、概率统计、微积分
+2. **编程能力**：Python、NumPy、Pandas
+3. **机器学习**：监督学习、无监督学习基础算法
+4. **实践项目**：完成2-3个完整的ML项目
+
+### 进阶阶段
+1. **深度学习**：神经网络、CNN、RNN、Transformer
+2. **专业方向**：选择CV、NLP、推荐等专业方向深入
+3. **工程能力**：模型部署、性能优化、分布式训练
+4. **论文研读**：阅读顶级会议论文，跟踪前沿技术
+
+### 面试准备
+1. **理论梳理**：系统梳理核心概念和算法原理
+2. **代码练习**：熟练实现常用算法
+3. **项目总结**：深入总结项目经验和技术难点
+4. **模拟面试**：进行技术面试模拟练习
+
+---
+
+> 💡 **提示**：AI算法面试既考查理论深度，也重视实践能力。建议在掌握理论基础的同时，多做实际项目，积累工程经验。

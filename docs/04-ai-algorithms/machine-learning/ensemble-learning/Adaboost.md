@@ -1,4 +1,4 @@
-﻿![Adboost框架图](/images/Adboost框架图.png)
+﻿![Adboost框架图](img/Adaboost/Adboost框架图.png)
 
 
 
@@ -69,7 +69,7 @@ $$
 
    
 
-		其中 $Z_t$是规范化因子，使得$D(t+1)$成为一个概率分布（和为1）：
+​		其中 $Z_t$是规范化因子，使得$D(t+1)$成为一个概率分布（和为1）：
 $$
 Z_{t}=\sum_{j=1}^{m} w_{t,i} \exp \left(-\alpha_{t} y_{i} G_{t}\left(x_{i}\right)\right)
 $$
