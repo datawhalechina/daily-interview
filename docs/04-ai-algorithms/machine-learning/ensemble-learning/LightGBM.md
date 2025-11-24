@@ -108,7 +108,7 @@ LightGBM的EFB算法将这个问题转化为图着色的问题来求解，将所
 
   生成每一棵树的时候，第一棵树的一个叶子节点内所有样本的label的均值就是这个棵树的预测值，后面根据残差再预测，最后根据将第一棵树的预测值+权重*(其它树的预测结果)
 
- ![image-20210629173116854](../../../../../Library/Application Support/typora-user-images/image-20210629173116854.png)
+ ![image-20210629173116854](../../../../../Library/Application Support/typora-user-/images/image-20210629173116854.png)
 
 * **分类**
 
