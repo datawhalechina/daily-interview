@@ -27,7 +27,7 @@
 
 **泛化误差、偏差、方差和模型复杂度的关系**（图片来源百面机器学习）
 
-<img src="img/过拟合与欠拟合/JrBui5yzA3IGgk7.png" alt="image-20210423092851506"  />
+<img src="/images/过拟合与欠拟合/JrBui5yzA3IGgk7.png" alt="image-20210423092851506"  />
 
 参考资料：https://blog.csdn.net/simple_the_best/article/details/71167786
 
