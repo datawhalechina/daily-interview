@@ -1,5 +1,5 @@
 <div align='center'>
-    <img src="./logo.jpeg" alt="alt text" width="100%">
+    <img src="./logo.png" alt="alt text" width="100%">
     <h1>⭐Daily Interview - 面试必看 </h1>
 </div>
 <div align="center">
