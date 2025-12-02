@@ -1,5 +1,8 @@
-# Daily Interview - 面试必看 ⭐
-
+<div align='center'>
+    <img src="./logo.jpeg" alt="alt text" width="100%">
+    <h1>⭐Daily Interview - 面试必看 </h1>
+</div>
+<div align="center">
 <div align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/datawhalechina/daily-interview?style=for-the-badge&logo=github)](https://github.com/datawhalechina/daily-interview/stargazers)
