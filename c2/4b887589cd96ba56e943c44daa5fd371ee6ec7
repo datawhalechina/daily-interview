@@ -1,0 +1,26 @@
+docs/04-ai-algorithms/machine-learning/ensemble-learning/XGBoost.md
+  s_02cd05757eb813::t_610c3b66c03f8e 22,76,85,98,115,118,143,178
+docs/04-ai-algorithms/machine-learning/ensemble-learning/LightGBM.md
+  h_7bb270e032372f 111
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "c24b887589cd96ba56e943c44daa5fd371ee6ec7",
+  "prompts": {},
+  "humans": {
+    "h_7bb270e032372f": {
+      "author": "huly64 <huly64@huly64765.local>"
+    }
+  },
+  "sessions": {
+    "s_02cd05757eb813": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f3fd9-b3e7-7b23-8517-57c9967b9f5c",
+        "model": "gpt-5.5"
+      },
+      "human_author": "huly64 <huly64@huly64765.local>"
+    }
+  }
+}
